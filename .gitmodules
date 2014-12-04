@@ -1,3 +1,0 @@
-[submodule "app/data"]
-	path = app/data
-	url = git@github.com:trezor/webwallet-data.git
