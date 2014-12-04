@@ -12,10 +12,11 @@
     "bootstrap": "~3.2.0",
     "bootstrap-slider": "seiyria/bootstrap-slider#~1.9.0",
     "bitcoinjs-lib": "trezor/bitcoinjs-lib",
-    "bwallet.js": "git@git.oschina.net:bwallet/bwallet.js.git", 
+    "bwallet.js": "git@git.oschina.net:bwallet/bwallet.js.git",
     "jsqrcode": "LazarSoft/jsqrcode",
-    "comma-separated-values": "~3.6.0"
-
+    "comma-separated-values": "~3.6.0",
+    "angular-translate": "~2.4.2",
+    "angular-translate-loader-static-files": "~2.4.2"
   },
   "devDependencies": {},
   "resolutions": {

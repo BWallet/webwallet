@@ -12,8 +12,26 @@
         'ngRoute',
         'ngSanitize',
         'ui.bootstrap',
-        'ja.qr'
+        'ja.qr',
+        'pascalprecht.translate'
     ]);
+	
+    angular.module('webwalletApp').config(function($translateProvider) {
+        $translateProvider.useStaticFilesLoader({
+            prefix : '/i18n/locale-',
+            suffix : '.json'
+        }); 
+        $translateProvider.registerAvailableLanguageKeys(['en', 'zh'], {
+            'en_US' : 'en',
+            'en_UK' : 'en',
+            'zh_CN' : 'zh',
+            'zh_TW' : 'zh',
+            'zh_HK' : 'zh',
+            'zh_SG' : 'zh',
+            'zh_MO' : 'zh'
+        }).fallbackLanguage('en');
+        $translateProvider.determinePreferredLanguage();
+    });
 
     // Load the Transport and bootstrap the Angular app.
     angular.element(document).ready(function () {
@@ -121,7 +139,6 @@
         } else {
             console.error(err);
         }
-
         // Pass Transport reference.
         app
             .value('trezorError', err)
