@@ -92,8 +92,14 @@
                 return new trezor.PluginTransport(plugin);
             });
         }
-
-        return loadHttp().catch(loadPlugin);
+		
+		function loadApplet() {
+            return trezor.AppletTransport.loadApplet().then(function (applet) {
+                return new trezor.AppletTransport(applet);
+            });
+        }
+		
+        return loadHttp().catch(loadApplet);
     }
 
     /**
