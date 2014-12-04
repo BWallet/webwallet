@@ -144,7 +144,7 @@ angular.module('webwalletApp').service('firmwareService', function FirmwareServi
     };
 
     function _validate(firmware) {
-        var magic = '54525a52'; // 'TRZR' in hex
+        var magic = '42445857'; // 42445857 - 'BDXW' in hex, 54525a52 - 'TRZR' in hex
 
         return (firmware.substr(0, magic.length) === magic) &&
             // * 2 because of hex
