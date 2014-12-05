@@ -11,6 +11,7 @@
     angular.module('webwalletApp', [
         'ngRoute',
         'ngSanitize',
+        'ngCookies',
         'ui.bootstrap',
         'ja.qr',
         'pascalprecht.translate'
@@ -30,6 +31,7 @@
             'zh_SG' : 'zh',
             'zh_MO' : 'zh'
         }).fallbackLanguage('en');
+        $translateProvider.useCookieStorage();
         $translateProvider.determinePreferredLanguage();
     });
 

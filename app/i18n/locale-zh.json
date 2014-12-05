@@ -1,4 +1,13 @@
 {
-	"main.get-started" : "开始!",
-    "main.connect-device-suggestion" : "请把BWallet设备插入到电脑."
+    "index.logo-img" : "images/logo_zh.png",
+	"index.nav-wallet" : "钱包",
+	"index.nav-what" : "BWallet是什么？",
+	"index.nav-news" : "新闻",
+	"index.nav-help" : "帮助",
+	"index.nav-support" : "技术支持",
+	"index.nav-language" : "English",
+	"index.footer-company" : "币定行",
+	
+	"main.get-started" : "开始！",
+    "main.connect-device-suggestion" : "请插入BWallet设备。"
 }

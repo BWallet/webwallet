@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>myTREZOR Web Wallet</title>
-    <meta name="description" content="myTREZOR Web Wallet">
+    <title>my BWallet</title>
+    <meta name="description" content="my BWallet">
     <meta name="viewport" content="width=device-width">
 
     <!-- build:css({.tmp,app}) styles/styles.css -->
@@ -22,26 +22,30 @@
     </div>
     <![endif]-->
 
+    <div id="webwalletApp-container"
+      ng-cloak>
+      
     <div class="page-header navbar navbar-inverse navbar-static-top">
-      <div class="container">
+      <div ng-controller="HeaderCtrl" class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">
-            <img src="images/logo.png" height="45" alt="myTREZOR Web Wallet">
+            <img ng-src="{{ 'index.logo-img' | translate }}" height="45" alt="my BWallet">
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Wallet</a></li>
-          <li><a target="_blank" href="http://bitcointrezor.com/">What is TREZOR?</a></li>
-          <li><a target="_blank" href="http://satoshilabs.com/news/">News</a></li>
-          <li><a target="_blank" href="http://doc.satoshilabs.com/trezor-user/">Help</a></li>
-          <li><a href="mailto:support@bitcointrezor.com">Support</a></li>
+          <li class="active"><a href="#" translate="index.nav-wallet">Wallet</a></li>
+          <li><a target="_blank" href="#" translate="index.nav-what">What is BWallet?</a></li>
+          <li><a target="_blank" href="#" translate="index.nav-news">News</a></li>
+          <li><a target="_blank" href="#" translate="index.nav-help">Help</a></li>
+          <li><a href="mailto:support@bidingxing.com" translate="index.nav-support">Support</a></li>
+          <li><a href="" ng-click="toggleLanguage()" translate="index.nav-language">中文</a></li>
         </ul>
       </div>
     </div>
-
+	
     <!-- Webwallet Application -->
-    <div id="webwalletApp-container"
-      ng-cloak>
+    <!-- Move to parent tag-->
+    <div id="" ng-cloak>
 
       <!-- Error -->
       <div ng-controller="ErrorCtrl"
@@ -128,10 +132,9 @@
 
       <div class="page-footer container">
         Copyright &copy; 2014
-        <a href="http://satoshilabs.com/" target="_blank">SatoshiLabs</a> |
-        Backend powered by
-        <a href="https://bitsofproof.com/?page_id=826" target="_blank"
-           ><img src="/images/bitsofproof.png" height="24" alt="Bits of Proof"></a>
+        <a href="http://bidingxing.com/" target="_blank" translate="index.footer-company">Bidingxing</a> |
+        Backend based on 
+        <a href="https://libbitcoin.org/" target="_blank">libbitcoin</a>
 
         <span class="pull-right">
           <ng-include src="'views/debug.link.html'"></ng-include>
@@ -139,6 +142,8 @@
       </div>
     </div>
 
+	</div>
+	
     <!-- build:js scripts/libs.js -->
     <script src="bower_components/lodash/dist/lodash.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -172,8 +177,10 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
     <!-- bootstrap modules -->
     <script src="bower_components/bootstrap/js/alert.js"></script>
     <script src="bower_components/bootstrap/js/button.js"></script>
@@ -214,6 +221,7 @@
     <script src="scripts/controllers/debug.js"></script>
     <script src="scripts/controllers/error.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/header.js"></script>
     <script src="scripts/controllers/nav.js"></script>
     <script src="scripts/controllers/import.js"></script>
     <script src="scripts/controllers/device/device.js"></script>

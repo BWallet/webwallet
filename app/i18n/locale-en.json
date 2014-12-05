@@ -1,4 +1,13 @@
 {
+    "index.logo-img" : "images/logo.png",
+	"index.nav-wallet" : "Wallet",
+	"index.nav-what" : "What is BWallet?",
+	"index.nav-news" : "News",
+	"index.nav-help" : "Help",
+	"index.nav-support" : "Support",
+	"index.nav-language" : "中文",
+	"index.footer-company" : "Bidingxing",
+	
 	"main.get-started" : "Get started!",
     "main.connect-device-suggestion" : "Connect your BWallet device to the computer."
 }
