@@ -3,7 +3,7 @@
 
     <div class="alert alert-danger alert-inconsistent"
          ng-show="account.isInconsistent()">
-      <strong>Warning!</strong> Account balance information is inconsistent.
+      <strong translate="account.common.account-inconsistent-warning">Warning!</strong> {{ 'account.common.account-inconsistent-message' | translate }}
     </div>
 
     <ng-include src="'views/account/nav.html'"></ng-include>
@@ -21,7 +21,7 @@
               <!-- Address field -->
               <div class="form-group"
                    ng-class="{ 'has-error': output.error.address }">
-                <label for="address" class="control-label col-sm-2">Address</label>
+                <label for="address" class="control-label col-sm-2" translate="account.send.address">Address</label>
                 <div class="col-sm-9">
                   <span class="input-with-icon">
                     <!-- Address input -->
@@ -34,7 +34,7 @@
                     <!-- QR scan button -->
                     <a href=""
                        class="glyphicon glyphicon-qrcode input-icon text-muted"
-                       tooltip="Scan QR code"
+                       tooltip="{{ 'account.send.scan-qr-code' | translate }}"
                        tooltip-append-to-body="true"
                        ng-click="scanQr($index)"
                        ng-show="!output.address && !qr.scanning && qr.enabled"></a>
@@ -49,10 +49,10 @@
                           ng-show="tx.values.outputs.length > 1"
                           ng-click="removeOutput($index)"
                           ng-disabled="qr.scanning"
-                          tooltip="Remove recipient">
+                          tooltip="{{ 'account.send.remove-tooltip' | translate }}">
                     <span class="text-muted">
                       <span class="glyphicon glyphicon-remove"></span>
-                      <span class="sr-only">Remove</span>
+                      <span class="sr-only" translate="account.send.remove">Remove</span>
                     </span>
                   </button>
                 </div>
@@ -61,7 +61,7 @@
               <!-- Amount fields -->
               <div class="form-group"
                    ng-class="{'has-error': output.error.amount}">
-                <label for="amount" class="control-label col-sm-2">Amount</label>
+                <label for="amount" class="control-label col-sm-2" translate="account.send.amount">Amount</label>
                 <div class="col-sm-10 tx-amount">
                   <div class="input-group">
                     <input id="amount" class="form-control" type="text"
@@ -81,7 +81,7 @@
                             ng-change="convertToAltCurrency(output)"
                             ng-options="currency for currency in currenciesAlt">
                     </select>
-                    <p class="form-control-static tx-amount-info">
+                    <p class="form-control-static tx-amount-info" translate="account.send.exchange-rates-provided-by">
                       Exchange rates provided by
                       <a href="http://www.coindesk.com/price/"
                          target="_blank">CoinDesk</a>.
@@ -101,14 +101,14 @@
               <div class="col-sm-10 col-sm-push-2">
                 <div class="clearfix">
                   <div class="pull-left"
-                       tooltip="Please connect your device to send coins."
+                       tooltip="{{ 'account.send.connect-device-tooltip' | translate }}"
                        tooltip-trigger="{{
                        device.status() !== 'connected' ? 'mouseenter' : 'manual'
                        }}"
                        tooltip-placement="bottom">
                     <button type="submit"
                             class="btn btn-primary btn-lg"
-                            ng-disabled="device.status() !== 'connected' || !tx.prepared">
+                            ng-disabled="device.status() !== 'connected' || !tx.prepared" translate="account.send.send">
                       Send
                     </button>
                   </div>
@@ -116,7 +116,7 @@
                   <div class="tx-submit-additional pull-right btn-group">
                     <button type="button" class="btn btn-default btn-sm"
                             ng-click="addOutput()">
-                      <span class="glyphicon glyphicon-plus"></span> Add recipient
+                      <span class="glyphicon glyphicon-plus"></span> {{ 'account.send.add-recipient' | translate }}
                     </button>
 
                     <button type="button" class="btn btn-default btn-sm dropdown-toggle"
@@ -126,12 +126,12 @@
                     <ul class="dropdown-menu">
                       <li>
                         <a href="" ng-click="promptCsv()">
-                          <span class="glyphicon glyphicon-import"></span> Import from CSV
+                          <span class="glyphicon glyphicon-import"></span> {{ 'account.send.import-from-csv' | translate }}
                         </a>
                       </li>
                       <li ng-show="tx.values.outputs.length > 1">
                         <a href="" ng-click="removeAllOutputs()">
-                          <span class="glyphicon glyphicon-remove"></span> Remove all outputs
+                          <span class="glyphicon glyphicon-remove"></span> {{ 'account.send.remove-all-outputs' | translate }}
                         </a>
                       </li>
                     </ul>
@@ -147,10 +147,10 @@
                 <div class="form-control-static tx-preview"
                      ng-show="tx.prepared">
                   <h6>
-                    <span tooltip="The transaction fee is calculated automatically."
+                    <span tooltip="{{ 'account.send.fee-tooltip' | translate }}"
                           tooltip-placement="bottom"
                           tooltip-append-to-body="true">
-                      Fee: {{tx.fee}} {{account.coin.coin_shortcut}}
+                      {{ 'account.send.fee' | translate }} {{tx.fee}} {{account.coin.coin_shortcut}}
                     </span>
                   </h6>
 
@@ -178,7 +178,7 @@
                           {{output.address}}
                         </span>
                         <span ng-if="output.address_n">
-                          {{output.address_n | bip32Path}} (the change address)
+                          {{output.address_n | bip32Path}} {{ 'account.send.the-change-address' | translate }}
                         </span>
                       </li>
                     </ol>
@@ -193,7 +193,7 @@
                  ng-if="sending">
               <div class="overlay-content text-center">
                 <p><span class="icon-loading"></span></p>
-                <p class="h4 text-muted">
+                <p class="h4 text-muted" translate="account.send.signing-and-sending-transaction">
                   Signing and sending transaction&hellip;
                 </p>
               </div>
