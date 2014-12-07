@@ -1,4 +1,6 @@
 {
+    "common.account" : "账户",
+    
     "index.logo-img" : "images/logo_zh.png",
     "index.nav-wallet" : "钱包",
     "index.nav-what" : "BWallet是什么？",

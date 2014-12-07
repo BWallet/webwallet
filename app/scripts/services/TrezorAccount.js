@@ -8,7 +8,9 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
     BigInteger,
     Bitcoin,
     $log,
-    $q) {
+    $q,
+    $translate,
+    $rootScope) {
 
     'use strict';
 
@@ -25,6 +27,22 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
         this._backend = TrezorBackend.singleton(coin);
         this._externalNode = utils.deriveChildNode(this.node, 0);
         this._changeNode = utils.deriveChildNode(this.node, 1);
+        
+        // label translate
+        this._label = createLabel('Account', this.id);
+        var self = this;
+        $translate('common.account').then(function (translation) {
+            self._label = createLabel(translation, self.id);
+        });
+        $rootScope.$on('$translateChangeSuccess', function () {
+            $translate('common.account').then(function (translation) {
+                self._label = createLabel(translation, self.id);
+            });
+        });
+        
+        function createLabel(prefix, id) {
+        	return prefix + ' #' + (+id + 1);
+        }
     }
 
     TrezorAccount.deserialize = function (data) {
@@ -61,7 +79,7 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
     };
 
     TrezorAccount.prototype.label = function () {
-        return 'Account #' + (+this.id + 1);
+        return this._label;
     };
 
     TrezorAccount.prototype.address = function (n) {

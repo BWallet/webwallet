@@ -1,4 +1,6 @@
 {
+    "common.account" : "Account",
+    
     "index.logo-img" : "images/logo.png",
     "index.nav-wallet" : "Wallet",
     "index.nav-what" : "What is BWallet?",
