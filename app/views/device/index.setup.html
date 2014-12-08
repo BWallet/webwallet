@@ -1,18 +1,18 @@
 <form ng-controller="DeviceSetupCtrl">
 
-  <h3>Welcome to TREZOR Setup!</h3>
-  <p class="lead">
-    Please take your time to read all of the instructions. Setting up your TREZOR
-    will take only a few minutes. When you're done, you can start using your TREZOR.
+  <h3 translate="device.setup.welcome">Welcome to BWallet Setup!</h3>
+  <p class="lead" translate="device.setup.welcome-message">
+    Please take your time to read all of the instructions. Setting up your BWallet
+    will take only a few minutes. When you're done, you can start using your BWallet.
   </p>
 
   <div class="form-group">
-    <label for="label">Device label</label>
+    <label for="label" translate="device.setup.label">Device label</label>
     <input type="text" name="label" id="label" class="form-control"
-           placeholder="My TREZOR"
+           placeholder="My BWallet"
            ng-model="settings.label">
-    <p class="help-block">
-      This label will be shown on the display when you plug your TREZOR in.
+    <p class="help-block" translate="device.setup.label-message">
+      This label will be shown on the display when you plug your BWallet in.
       This is useful if you have more than one device.
     </p>
   </div>
@@ -23,7 +23,7 @@
     <div class="line-divider-content text-center">
       <button class="btn btn-xs btn-default"
               ng-click="advanced = !advanced">
-        Advanced settings
+        {{ 'device.setup.advanced-settings' | translate }}
         <span class="caret"></span>
       </button>
     </div>
@@ -32,10 +32,10 @@
   <div ng-show="advanced">
     <div class="form-group">
       <hr>
-      <h4>Recovery seed length</h4>
-      <p>
+      <h4 translate="device.setup.seed-length">Recovery seed length</h4>
+      <p translate="device.setup.seed-length-message">
         Your recovery seed is a sequence of words. It will help you recover your wallet
-        (your bitcoins and transaction history), into another device should your TREZOR
+        (your bitcoins and transaction history), into another device should your BWallet
         be lost or destoyed.
       </p>
       <input type="text" name="strength" id="strength"
@@ -49,50 +49,50 @@
              ng-model="settings.strength">
       <div class="row devsetup-strength">
         <p class="col-sm-4 text-left">
-          12 words <span class="devsetup-strength-label">Good enough</span>
+          {{ 'device.setup.seed-length-12' | translate }} <span class="devsetup-strength-label" translate="device.setup.seed-length-12-level">Good enough</span>
         </p>
         <p class="col-sm-4 text-center">
-          18 words <span class="devsetup-strength-label">Even stronger</span>
+          {{ 'device.setup.seed-length-18' | translate }} <span class="devsetup-strength-label" translate="device.setup.seed-length-18-level">Even stronger</span>
         </p>
         <p class="col-sm-4 text-right">
-          24 words <span class="devsetup-strength-label">Paranoid</span>
+          {{ 'device.setup.seed-length-24' | translate }} <span class="devsetup-strength-label" translate="device.setup.seed-length-24-level">Paranoid</span>
         </p>
       </div>
-      <p class="help-block">We believe 12 words are safe enough but you have the option to use 18 or 24
+      <p class="help-block" translate="device.setup.seed-length-hint">We believe 12 words are safe enough but you have the option to use 18 or 24
       for more security. Just keep in mind that the recovery
       process using a longer seed takes slightly more time.</p>
     </div>
 
     <hr>
-    <h4>PIN protection</h4>
-    <p>
+    <h4 translate="device.setup.pin-protection">PIN protection</h4>
+    <p translate="device.setup.pin-protection-message-1">
       Using PIN protection is highly recommended. The PIN prevents unauthorized persons from stealing
       your bitcoins if they ever get physical access to your device.
     </p>
-    <p>You can reset or change your PIN at any time after the setup is complete.
+    <p translate="device.setup.pin-protection-message-2">You can reset or change your PIN at any time after the setup is complete.
     Be careful with your recovery card.
     If anyone finds out your recovery seed they can steal your bitcoins even without your PIN.</p>
     <div class="checkbox">
       <label>
         <input type="checkbox" name="pin-protection"
-               ng-model="settings.pin_protection"> Enable PIN protection
+               ng-model="settings.pin_protection"> {{ 'device.setup.pin-protection-enable' | translate }}
       </label>
     </div>
 
     <hr>
-    <h4>Additional passphrase encryption</h4>
-    <p>Using an encryption passphrase adds an additional level of security.
+    <h4 translate="device.setup.passphrase">Additional passphrase encryption</h4>
+    <p translate="device.setup.passphrase-message">Using an encryption passphrase adds an additional level of security.
       You'll be asked for your passphrase every time you want to access your
       wallet.</p>
     <div class="alert alert-warning alert-withicon">
       <span class="glyphicon glyphicon-warning-sign alert-icon"></span>
-      <h4>Passphrase encryption is for experts only. Proceed with caution!</h4>
-      <p>Passphrase works like a 25th word of the seed which is not stored in
-      the Trezor. If you forget your passphrase, your wallet is lost for good. There is
-      absolutely no way to recover your funds.<br>
-      <p>If you mistype your passphrase, a different wallet is created, which
+      <h4 translate="device.setup.passphrase-caution-title">Passphrase encryption is for experts only. Proceed with caution!</h4>
+      <p translate="device.setup.passphrase-caution-content-1">Passphrase works like a 25th word of the seed which is not stored in
+      the BWallet. If you forget your passphrase, your wallet is lost for good. There is
+      absolutely no way to recover your funds.<br></p>
+      <p translate="device.setup.passphrase-caution-content-2">If you mistype your passphrase, a different wallet is created, which
       will look as if you had 0 BTC on your account.</p>
-      <p>If you choose to use passphrase encryption now, you cannot turn it
+      <p translate="device.setup.passphrase-caution-content-3">If you choose to use passphrase encryption now, you cannot turn it
       off later and vice versa (if you choose not to use it, you cannot turn it
       on later).</p>
     </div>
@@ -100,7 +100,7 @@
       <label>
         <input type="checkbox" name="passphrase-protection"
                ng-model="settings.passphrase_protection">
-        I've read all the information above and I want to enable passphrase encryption.
+        {{ 'device.setup.passphrase-enable' | translate }}
       </label>
     </div>
     <hr>
@@ -109,7 +109,7 @@
 
   <div class="form-group text-center">
     <button class="btn btn-lg btn-success"
-            ng-click="setupDevice()">Continue</button>
+            ng-click="setupDevice()" translate="device.setup.continue">Continue</button>
   </div>
 
 </form>
