@@ -156,5 +156,19 @@
     "device.load.continue" : "Continue",
     "device.load.cancel" : "Cancel",
     
+    "modal.button.fee-over-threshold" : "Fee is over threshold.",
+    "modal.button.fee-over-threshold-message" : "Please confirm the action on your device.",
+    "modal.button.confirm-output" : "Please confirm the transaction output on your device.",
+    "modal.button.confirm-output-to" : "to",
+    "modal.button.sign-tx" : "Please confirm the transaction on your device.",
+    "modal.button.sign-tx-message-1" : "Really send",
+    "modal.button.sign-tx-message-2" : "from your wallet?",
+    "modal.button.sign-tx-message-3" : "Fee will be",
+    "modal.button.confirm-word" : "Please write down the recovery seed from your device.",
+    "modal.button.wipe-device" : "All data on your device will be deleted.",
+    "modal.button.wipe-device-message-1" : "This action cannot be undone. Please <strong>confirm on your device</strong>.",
+    "modal.button.wipe-device-message-2" : "Never do this action with BWallet holding coins unless you have your recovery seed at hand.",
+    "modal.button.default" : "Please confirm the action on your device.",
+    
     "end" : "end"
 }
