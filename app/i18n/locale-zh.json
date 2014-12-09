@@ -170,5 +170,72 @@
     "modal.button.wipe-device-message-2" : "绝对不要在有币的BWallet进行这个操作，除非你有恢复种子。",
     "modal.button.default" : "请在你的设备上确认操作。",
     
+    "modal.csv.close" : "关闭",
+    "modal.csv.import-from-csv" : "从CSV导入地址",
+    "modal.csv.example" : "模板:",
+    "modal.csv.cell-delimiter" : "单元格分隔符",
+    "modal.csv.first-row-is-header" : "第一行是标题",
+    "modal.csv.paste-the-csv-here" : "把CSV内容粘贴在这里:",
+    "modal.csv.cancel" : "取消",
+    "modal.csv.import" : "导入",
+    
+    "modal.disconnect.close" : "关闭",
+    "modal.disconnect.disconnect" : "请拔出你的BWallet",
+    "modal.disconnect.disconnect-message" : "拔出之后myBWallet将不会记住你的BWallet。",
+    "modal.disconnect.cancel" : "取消",
+    
+    "modal.disconnect.wipe.finished" : "重置完成",
+    "modal.disconnect.wipe.successfully" : "你的BWallet已经重置成功。",
+    "modal.disconnect.wipe.disconnect" : "请<strong>拔出</strong>你的BWallet。",
+    
+    "modal.forget.forget-device" : "是否记住设备？",
+    "modal.forget.forget-device-message-1" : "需要记住你的设备吗，这样即使将它拔出你仍然可以在myBWallet查看到它？",
+    "modal.forget.forget-device-message-2" : "如果你选择记住这个设备，那么下次你拔出它时我们将不再询问你。",
+    "modal.forget.remember" : "记住",
+    "modal.forget.forget" : "不要记住",
+    
+    "modal.forget.wipe.finished" : "重置完成",
+    "modal.forget.wipe.finished-message" : "你的BWallet已经重置成功。",
+    "modal.forget.wipe.remember-message" : "是否需要myBWallet记住你的旧数据？",
+    "modal.forget.wipe.remember" : "记住",
+    "modal.forget.wipe.forget" : "不要记住（建议）",
+    
+    "modal.label.close" : "关闭",
+    "modal.label.enter-label" : "请输入设备标签",
+    "modal.label.change" : "修改",
+    
+    "modal.passphrase.close" : "关闭",
+    "modal.passphrase.enter-passphrase" : "请输入你的密码",
+    "modal.passphrase.re-type" : "再次输入",
+    "modal.passphrase.passphrase-case-sensitive" : "请注意，密码是区分大小写的。",
+    "modal.passphrase.show-passphrase" : "显示密码",
+    "modal.passphrase.passphrase-not-match" : "密码不一致！",
+    "modal.passphrase.passphrase-too-long" : "密码长度超过限制！",
+    "modal.passphrase.enter" : "确定",
+    
+    "modal.pin.close" : "关闭",
+    "modal.pin.enter-current-pin" : "请输入当前的PIN：",
+    "modal.pin.look-at-device" : "请查看设备上数字的位置。",
+    "modal.pin.enter-new-pin" : "请输入新的PIN：",
+    "modal.pin.re-enter-new-pin" : "请再次输入新的PIN：",
+    "modal.pin.look-at-device-positions-changed" : "注意，显示在设备上的数字位置已经改变了！",
+    "modal.pin.rating-too-long" : "长度超过限制",
+    "modal.pin.rating-weak" : "弱",
+    "modal.pin.rating-fine" : "中",
+    "modal.pin.rating-strong" : "强",
+    "modal.pin.rating-ultimate" : "极强",
+    "modal.pin.enter" : "确定",
+    "modal.pin.help" : "忘记了？请查看<a href='#' target='_blank'>用户手册</a>。",
+    
+    "modal.qr.close" : "关闭",
+    "modal.qr.scan-address" : "从二维码扫描地址",
+    "modal.qr.cancel" : "取消",
+    
+    "modal.setup.title" : "恢复种子设置",
+    "modal.setup.write-message" : "即将显示{{ recoveryWords }}个单词，当你遗失了设备它们可以用来恢复你的账户。<strong>请仔细记录所有这些单词。</strong>",
+    "modal.setup.write" : "请记录恢复种子的第{{ recoveryCurrentWord }}个单词。",
+    "modal.setup.check-message" : "即将再次显示这{{ recoveryWords }}个单词。<strong>请仔细检查以确保你记录的是正确的。</strong>",
+    "modal.setup.check" : "请检查恢复种子的第{{ recoveryCurrentWord }}个单词。",
+    
     "end" : "end"
 }

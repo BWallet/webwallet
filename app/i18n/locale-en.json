@@ -170,5 +170,72 @@
     "modal.button.wipe-device-message-2" : "Never do this action with BWallet holding coins unless you have your recovery seed at hand.",
     "modal.button.default" : "Please confirm the action on your device.",
     
+    "modal.csv.close" : "Cancel",
+    "modal.csv.import-from-csv" : "Import addresses from CSV",
+    "modal.csv.example" : "Example:",
+    "modal.csv.cell-delimiter" : "Cell delimiter",
+    "modal.csv.first-row-is-header" : "First row is header",
+    "modal.csv.paste-the-csv-here" : "Paste the CSV here:",
+    "modal.csv.cancel" : "Cancel",
+    "modal.csv.import" : "Import",
+    
+    "modal.disconnect.close" : "Cancel",
+    "modal.disconnect.disconnect" : "Disconnect your BWallet now",
+    "modal.disconnect.disconnect-message" : "myBWallet will forget your BWallet right after you disconnect it.",
+    "modal.disconnect.cancel" : "Cancel",
+    
+    "modal.disconnect.wipe.finished" : "Wipe finished",
+    "modal.disconnect.wipe.successfully" : "Your BWallet was successfully wiped.",
+    "modal.disconnect.wipe.disconnect" : "Please <strong>disconnect</strong> it now.",
+    
+    "modal.forget.forget-device" : "Forget device?",
+    "modal.forget.forget-device-message-1" : "Would you like myBWallet to forget your device or to remember it, so that it is still visible even while disconnected?",
+    "modal.forget.forget-device-message-2" : "If you choose to remember the device, we will not ask you this question next time you disconnect the device.",
+    "modal.forget.remember" : "Remember",
+    "modal.forget.forget" : "Forget",
+    
+    "modal.forget.wipe.finished" : "Wipe finished",
+    "modal.forget.wipe.finished-message" : "Your BWallet was successfully wiped.",
+    "modal.forget.wipe.remember-message" : "Would you like myBWallet to forget your old device with the old data or to remember it?",
+    "modal.forget.wipe.remember" : "Remember",
+    "modal.forget.wipe.forget" : "Forget (recommended)",
+    
+    "modal.label.close" : "Cancel",
+    "modal.label.enter-label" : "Please enter the device label",
+    "modal.label.change" : "Change",
+    
+    "modal.passphrase.close" : "Cancel",
+    "modal.passphrase.enter-passphrase" : "Please enter your passphrase",
+    "modal.passphrase.re-type" : "Re-type for control",
+    "modal.passphrase.passphrase-case-sensitive" : "Note that passphrase is case-sensitive.",
+    "modal.passphrase.show-passphrase" : "Show passphrase",
+    "modal.passphrase.passphrase-not-match" : "Passphrases do not match!",
+    "modal.passphrase.passphrase-too-long" : "Passphrase is too long!",
+    "modal.passphrase.enter" : "Enter",
+    
+    "modal.pin.close" : "Cancel",
+    "modal.pin.enter-current-pin" : "Please enter current PIN:",
+    "modal.pin.look-at-device" : "Look at the device for number positions.",
+    "modal.pin.enter-new-pin" : "Please enter new PIN:",
+    "modal.pin.re-enter-new-pin" : "Please re-enter new PIN:",
+    "modal.pin.look-at-device-positions-changed" : "Note that the positions of numbers shown on the device have changed!",
+    "modal.pin.rating-too-long" : "Too Long",
+    "modal.pin.rating-weak" : "Weak",
+    "modal.pin.rating-fine" : "Fine",
+    "modal.pin.rating-strong" : "Strong",
+    "modal.pin.rating-ultimate" : "Ultimate",
+    "modal.pin.enter" : "Enter",
+    "modal.pin.help" : "Lost? Check our <a href='#' target='_blank'>user manual</a>.",
+    
+    "modal.qr.close" : "Cancel",
+    "modal.qr.scan-address" : "Scan address from a QR code",
+    "modal.qr.cancel" : "Cancel",
+    
+    "modal.setup.title" : "Recovery seed setup",
+    "modal.setup.write-message" : "We will now show you {{recoveryWords}} words that will allow you to recover your accounts in case you lose your device. <strong>Please write down all these words carefully.</strong>",
+    "modal.setup.write" : "Please write down the {{recoveryCurrentWord | ordinal}} word of your recovery seed.",
+    "modal.setup.check-message" : "We will now show you the {{recoveryWords}} words again. <strong>Please check carefully that you wrote them down correctly.</strong>",
+    "modal.setup.check" : "Please check the {{recoveryCurrentWord | ordinal}} word of your recovery seed.",
+    
     "end" : "end"
 }
