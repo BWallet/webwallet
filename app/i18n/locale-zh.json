@@ -129,9 +129,9 @@
     
     "device.recovery.connect-device-message" : "若要使用这个功能，<strong>请插入你的设备</strong>。",
     "device.recovery.seed-recovery" : "种子恢复",
-    "device.recovery.seed-recovery-message" : "请按照设备上的指令进行操作。单词将按照打乱的顺序进行输入。<br/>你也将被要求输入一些不属于你的恢复种子的单词。",
+    "device.recovery.seed-recovery-message" : "请按照设备上的指令进行操作。单词将按照打乱的顺序进行输入。<br/>你也有可能被要求输入一些不属于你的恢复种子的单词。",
     "device.recovery.processing" : "处理中……",
-    "device.recovery.enter-seed-word" : "输入种子单词",
+    "device.recovery.enter-seed-word" : "请输入单词",
     "device.recovery.confirm-choice" : "确认选择请按回车键。",
     "device.recovery.recovered-seed-words" : "已输入的种子单词:",
     "device.recovery.device-label" : "设备标签",
