@@ -2,8 +2,8 @@
     ng-if="!debug.visible">
     <button class="btn btn-xs btn-link pull-right"
         ng-click="debug.toggle()"
-        tooltip="Show log">
+        tooltip="{{ 'debug.button.show-log' | translate }}">
         <span class="glyphicon glyphicon-list"></span>
-        <span class="sr-only">Show log</span>
+        <span class="sr-only" translate="debug.button.show-log">Show log</span>
     </button>
 </span>

@@ -5,10 +5,10 @@
         <button type="button" class="close"
                 ng-click="debug.toggle()">
             <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
+            <span class="sr-only" translate="debug.log.close">Close</span>
         </button>
-        <h4>Log</h4>
+        <h4 translate="debug.log.log">Log</h4>
         <textarea ng-click="debug.focus($event)">{{debug.logs}}</textarea>
-        <p>Warning: This log contains your XPUB. When you give it to a third party, you allow it to see your whole transaction history.</p>
+        <p translate="debug.log.warning">Warning: This log contains your XPUB. When you give it to a third party, you allow it to see your whole transaction history.</p>
     </div>
 </div>

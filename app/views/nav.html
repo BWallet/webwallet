@@ -7,7 +7,7 @@
        ng-class="{ active: isActive('/device/{{device.id}}$') }">
       <h4>
         {{device.label()}}
-        <span class="pull-right dev-status-icon icon-loading" title="Loading..."
+        <span class="pull-right dev-status-icon icon-loading" title="{{ 'nav.device-loading' | translate }}"
               ng-show="device.isLoading()"></span>
       </h4>
 
@@ -16,15 +16,15 @@
               ng-switch="device.status()">
           <span ng-switch-when="loading">
             <span class="glyphicon glyphicon-cog"></span>
-            {{device.statusLabel() || 'Loading'}}&hellip;
+            {{ device.statusLabel() || ('nav.device-status-loading' | translate) }}&hellip;
           </span>
           <span ng-switch-when="connected">
             <span class="glyphicon glyphicon-check"></span>
-            {{device.statusLabel() || 'Connected'}}
+            {{ device.statusLabel() || ('nav.device-status-connected' | translate) }}
           </span>
           <span ng-switch-when="disconnected">
             <span class="glyphicon glyphicon-unchecked"></span>
-            {{device.statusLabel() || 'Disconnected'}}
+            {{ device.statusLabel() || ('nav.device-status-disconnected' | translate) }}
           </span>
         </span>
       </small>
@@ -32,7 +32,7 @@
 
     <a href=""
        class="dev-forget close"
-       tooltip="Forget this device"
+       tooltip="{{ 'nav.device-forget-tooltip' | translate }}"
        tooltip-placement="bottom"
        tooltip-append-to-body="true"
        tooltip-trigger="mouseenter"
@@ -42,9 +42,9 @@
          ng-show="device.error">
       <div class="tooltip-inner"
            ng-switch="device.error">
-        <span ng-switch-when="Opening device failed">
+        <span ng-switch-when="Opening device failed" translate="nav.device-error-opening-failed">
           Device could not be opened.
-          Make sure you don't have myTREZOR running in another tab or browser window!
+          Make sure you don't have myBWallet running in another tab or browser window!
         </span>
         <span ng-switch-default>{{device.error}}</span>
       </div>
@@ -63,11 +63,11 @@
               ({{account.balance | amount}} {{account.coin.coin_shortcut}})
             </span>
             <span ng-if="account.balance == null">
-              <span class="icon-loading" title="Loading&hellip;"></span>
+              <span class="icon-loading" title="{{ 'nav.account-status-loading' | translate }}"></span>
             </span>
             <span ng-if="account.isOffline()"
                   class="pull-right text-danger">
-              <span class="glyphicon glyphicon-warning-sign"></span> Offline
+              <span class="glyphicon glyphicon-warning-sign"></span> {{ 'nav.account-status-offline' | translate }}
             </span>
           </small>
         </a>
@@ -76,20 +76,19 @@
 
     <div ng-if="!device.isEmpty()">
       <div ng-if="!device.canAddAccount()"
-           tooltip="
-             To add accounts, make sure your device is connected
-             and the last account is not empty."
-           tooltip-placement="bottom">
+           tooltip="{{ 'nav.account-add-tooltip' | translate }}"
+           tooltip-placement="bottom"
+           tooltip-trigger="mouseenter">
         <a ng-href="" class="btn btn-sm"
            disabled
-          ><span class="glyphicon glyphicon-plus"></span> Add account</a>
+          ><span class="glyphicon glyphicon-plus"></span> {{ 'nav.account-add' | translate }}</a>
       </div>
 
       <div ng-if="device.canAddAccount()">
         <a ng-href="" class="btn btn-sm"
            ng-click="addAccount(device)"
            ng-disabled="addingInProgress"
-          ><span class="glyphicon glyphicon-plus"></span> Add account</a>
+          ><span class="glyphicon glyphicon-plus"></span> {{ 'nav.account-add' | translate }}</a>
       </div>
     </div>
 

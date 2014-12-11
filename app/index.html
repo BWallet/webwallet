@@ -86,10 +86,10 @@
         <div class="alert alert-warning alertbar"
           ng-if="optionalFirmware">
           <div class="container">
-            <strong>New TREZOR firmware is available.</strong>
-            Upgrade for the newest features and bug fixes.
+            <strong translate="index.firmware.title">New BWallet firmware is available.</strong>
+            {{ 'index.firmware.message' | translate }}
             <button class="btn btn-sm btn-warning"
-                    ng-click="optionalFirmware.update()">Show details</button>
+                    ng-click="optionalFirmware.update()" translate="index.firmware.show-details">Show details</button>
           </div>
         </div>
           </div>
@@ -133,9 +133,9 @@
       <div class="page-footer container">
         Copyright &copy; 2014
         <a href="http://bidingxing.com/" target="_blank" translate="index.footer-company">Bidingxing</a> |
-        Backend based on 
+        {{ 'index.footer-based-on-1' | translate }}
         <a href="https://libbitcoin.org/" target="_blank">libbitcoin</a>
-
+		{{ 'index.footer-based-on-2' | translate }}
         <span class="pull-right">
           <ng-include src="'views/debug.link.html'"></ng-include>
         </span>

@@ -7,25 +7,25 @@
 
         <div class="alert alert-warning alert-withicon alert-lg">
           <span class="glyphicon glyphicon-warning-sign alert-icon"></span>
-          <p>This is an advanced interface intended for developer use only!</p>
-          <p>Never use this process unless you really know what you are doing!</p>
+          <p translate="import.caution-content-1">This is an advanced interface intended for developer use only!</p>
+          <p translate="import.caution-content-2">Never use this process unless you really know what you are doing!</p>
         </div>
 
         <div class="form-group">
-          <label for="label" class="control-label">Device ID</label>
+          <label for="label" class="control-label" translate="import.device-id">Device ID</label>
           <input type="text" name="id" id="id" class="form-control"
                  ng-model="settings.id">
         </div>
 
         <div class="form-group">
-          <label for="label" class="control-label">Device label</label>
+          <label for="label" class="control-label" translate="import.device-label">Device label</label>
           <input type="text" name="label" id="label" class="form-control"
-                 placeholder="My TREZOR"
+                 placeholder="My BWallet"
                  ng-model="settings.label">
         </div>
 
         <div class="form-group">
-          <label for="payload" class="control-label">
+          <label for="payload" class="control-label" translate="import.account-xpubs">
             Account XPUBs
             <small>(1 per row)</small>
           </label>
@@ -35,8 +35,8 @@
 
         <div class="form-group">
           <button class="btn btn-primary"
-                  ng-click="importDevice()">Continue</button>
-          <a href="#/" class="btn btn-link">Cancel</a>
+                  ng-click="importDevice()" translate="import.continue">Continue</button>
+          <a href="#/" class="btn btn-link" translate="import.cancel">Cancel</a>
         </div>
 
       </form>
