@@ -14,10 +14,10 @@ angular.module('webwalletApp').controller('LanguageCtrl', function (
 
     'use strict';
 
-	angular.element("#nav-language").click(function () {
-		$scope.toggleLanguage();
-		return false;
-	});
+    angular.element("#nav-language").click(function () {
+        $scope.toggleLanguage();
+        return false;
+    });
 
     $rootScope.$on('$translateChangeEnd', function (event, args) {
         console.log('[LanguageCtrl] current language: ', args.language);

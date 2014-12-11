@@ -4,6 +4,7 @@ angular.module('webwalletApp').controller('DeviceSetupCtrl', function (
     utils,
     flash,
     $scope,
+    $rootScope,
     $modal) {
 
     'use strict';
@@ -12,8 +13,17 @@ angular.module('webwalletApp').controller('DeviceSetupCtrl', function (
 
     $scope.advanced = false;
     $scope.settings = {
-        pin_protection: true
+        pin_protection: true,
+        language: 'en'
     };
+    
+    if ($rootScope.language) {
+    	$scope.settings.language = $rootScope.language;
+    }
+    $rootScope.$on('$translateChangeEnd', function (event, args) {
+        $scope.settings.language = args.language;
+    });
+    $scope.languages = [{code: 'en', label: 'English'}, {code: 'zh', label: '中文'}];
 
     // `recoveryWords` count depends on users choice and gets
     // initialized in `setupDevice`

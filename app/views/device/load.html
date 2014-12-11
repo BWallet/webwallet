@@ -26,6 +26,14 @@
                  placeholder="My BWallet"
                  ng-model="settings.label">
         </div>
+        
+        <div class="form-group">
+          <label for="language" class="control-label" translate="device.load.device-language">Device language</label>
+          <select name="language" id="language" class="form-control"
+                 ng-model="settings.language"
+                 ng-options="language.code as language.label for language in languages">
+          </select>
+        </div>
 
         <div class="form-group">
           <label for="payload" class="control-label" translate="device.load.seed-or-xprv">Recovery seed or XPRV private key</label>

@@ -15,6 +15,15 @@
       This label will be shown on the display when you plug your BWallet in.
       This is useful if you have more than one device.
     </p>
+    
+    <label for="language" translate="device.setup.language">Device language</label>
+    <select name="language" id="language" class="form-control"
+           ng-model="settings.language"
+           ng-options="language.code as language.label for language in languages">
+    </select>
+    <p class="help-block" translate="device.setup.language-message">
+      The language be used that your device displaying text.
+    </p>
   </div>
 
   <div class="line-divider"

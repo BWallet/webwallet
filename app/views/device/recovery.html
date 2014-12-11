@@ -62,6 +62,14 @@
                  placeholder="My BWallet"
                  ng-model="settings.label">
         </div>
+        
+        <div class="form-group">
+          <label for="language" class="control-label" translate="device.recovery.device-language">Device language</label>
+          <select name="language" id="language" class="form-control"
+                 ng-model="settings.language"
+                 ng-options="language.code as language.label for language in languages">
+          </select>
+        </div>
 
         <div class="form-group">
           <label for="word_count" class="control-label"

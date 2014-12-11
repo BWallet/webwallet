@@ -4,6 +4,7 @@ angular.module('webwalletApp').controller('DeviceRecoveryCtrl', function (
     bip39,
     flash,
     $scope,
+    $rootScope,
     $location) {
 
     'use strict';
@@ -14,8 +15,17 @@ angular.module('webwalletApp').controller('DeviceRecoveryCtrl', function (
     $scope.seedWords = null;
     $scope.seedWordlist = bip39.english;
     $scope.settings = {
-        pin_protection: true
+        pin_protection: true,
+        language: 'en'
     };
+
+    if ($rootScope.language) {
+    	$scope.settings.language = $rootScope.language;
+    }
+    $rootScope.$on('$translateChangeEnd', function (event, args) {
+        $scope.settings.language = args.language;
+    });
+    $scope.languages = [{code: 'en', label: 'English'}, {code: 'zh', label: '中文'}];
 
     $scope.$on('device.word', promptWord);
 
