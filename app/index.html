@@ -22,30 +22,30 @@
     </div>
     <![endif]-->
 
-    <div id="webwalletApp-container"
-      ng-cloak>
-      
     <div class="page-header navbar navbar-inverse navbar-static-top">
-      <div ng-controller="HeaderCtrl" class="container">
+      <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">
-            <img ng-src="{{ 'index.logo-img' | translate }}" height="45" alt="my BWallet">
+            <img src="images/logo.png" height="45" alt="my BWallet" id="logo-img">
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#" translate="index.nav-wallet">Wallet</a></li>
-          <li><a target="_blank" href="#" translate="index.nav-what">What is BWallet?</a></li>
-          <li><a target="_blank" href="#" translate="index.nav-news">News</a></li>
-          <li><a target="_blank" href="#" translate="index.nav-help">Help</a></li>
-          <li><a href="mailto:support@bidingxing.com" translate="index.nav-support">Support</a></li>
-          <li><a href="" ng-click="toggleLanguage()" translate="index.nav-language">中文</a></li>
+          <li class="active"><a href="#" id="nav-wallet">Wallet</a></li>
+          <li><a target="_blank" href="#" id="nav-what">What is BWallet?</a></li>
+          <li><a target="_blank" href="#" id="nav-news">News</a></li>
+          <li><a target="_blank" href="#" id="nav-help">Help</a></li>
+          <li><a href="mailto:support@bidingxing.com" id="nav-support">Support</a></li>
+          <li><a href="#" id="nav-language" >中文</a></li>
         </ul>
       </div>
     </div>
 	
     <!-- Webwallet Application -->
     <!-- Move to parent tag-->
-    <div id="" ng-cloak>
+    <div id="webwalletApp-container" ng-cloak>
+
+      <div ng-controller="LanguageCtrl" id="languageCtrl-container">
+      </div>
 
       <!-- Error -->
       <div ng-controller="ErrorCtrl"
@@ -142,8 +142,6 @@
       </div>
     </div>
 
-	</div>
-	
     <!-- build:js scripts/libs.js -->
     <script src="bower_components/lodash/dist/lodash.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -221,7 +219,7 @@
     <script src="scripts/controllers/debug.js"></script>
     <script src="scripts/controllers/error.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/header.js"></script>
+    <script src="scripts/controllers/language.js"></script>
     <script src="scripts/controllers/nav.js"></script>
     <script src="scripts/controllers/import.js"></script>
     <script src="scripts/controllers/device/device.js"></script>

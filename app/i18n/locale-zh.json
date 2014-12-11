@@ -1,13 +1,14 @@
 {
     "common.account" : "账户",
     
-    "index.logo-img" : "images/logo_zh.png",
-    "index.nav-wallet" : "钱包",
-    "index.nav-what" : "BWallet是什么？",
-    "index.nav-news" : "新闻",
-    "index.nav-help" : "帮助",
-    "index.nav-support" : "技术支持",
-    "index.nav-language" : "English",
+    "logo-img" : "images/logo_zh.png",
+    "nav-wallet" : "钱包",
+    "nav-what" : "BWallet是什么？",
+    "nav-news" : "新闻",
+    "nav-help" : "帮助",
+    "nav-support" : "技术支持",
+    "nav-language" : "English",
+    
     "index.firmware.title" : "发现新版本BWallet固件。",
     "index.firmware.message" : "升级以使用新特性或修复缺陷。",
     "index.firmware.show-details" : "查看详情",

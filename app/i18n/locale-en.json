@@ -1,13 +1,14 @@
 {
     "common.account" : "Account",
     
-    "index.logo-img" : "images/logo.png",
-    "index.nav-wallet" : "Wallet",
-    "index.nav-what" : "What is BWallet?",
-    "index.nav-news" : "News",
-    "index.nav-help" : "Help",
-    "index.nav-support" : "Support",
-    "index.nav-language" : "中文",
+    "logo-img" : "images/logo.png",
+    "nav-wallet" : "Wallet",
+    "nav-what" : "What is BWallet?",
+    "nav-news" : "News",
+    "nav-help" : "Help",
+    "nav-support" : "Support",
+    "nav-language" : "中文",
+    
     "index.firmware.title" : "New BWallet firmware is available.",
     "index.firmware.message" : "Upgrade for the newest features and bug fixes.",
     "index.firmware.show-details" : "Show details",
