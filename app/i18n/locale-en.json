@@ -120,7 +120,7 @@
     "device.index.hint-message" : "Hover over the account public key to show its QR code. Scan it into an application that supports XPUBs such as <a target='_blank' href='https://play.google.com/store/apps/details?id=com.satoshilabs.btcreceive'>myTREZOR Lite</a> for Android. Afterwards you can watch your transactions and receive payments everywhere without carrying your  around!",
     "device.index.wipe-device" : "Wipe device",
     
-    "device.index.info.change-label" : "Change label",
+    "device.index.info.change-label" : "Change label and language",
     "device.index.info.total-balance" : "total balance",
     "device.index.info.pin-protection" : "PIN protection:",
     "device.index.info.pin-protection-enabled" : "Enabled",
@@ -274,7 +274,9 @@
     "modal.firmware.update-failed" : "Update failed",
     
     "modal.label.close" : "Cancel",
-    "modal.label.enter-label" : "Please enter the device label",
+    "modal.label.enter-label" : "Please enter the device label and language",
+    "modal.label.label" : "Device label",
+    "modal.label.language" : "Device language",
     "modal.label.change" : "Change",
     
     "modal.passphrase.close" : "Cancel",

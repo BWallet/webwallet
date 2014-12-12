@@ -24,7 +24,8 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
         this._loadingLevel = 0;
     }
 
-    TrezorDevice.prototype.DEFAULT_LABEL = 'My TREZOR';
+    TrezorDevice.prototype.DEFAULT_LABEL = 'My BWallet';
+    TrezorDevice.prototype.DEFAULT_LANGUAGE = 'english';
     TrezorDevice.prototype.LABEL_MAX_LENGTH = 16;
 
     TrezorDevice.EVENT_PIN = 'pin';
@@ -500,6 +501,22 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
             return self._session.initialize()
                 .then(function () {
                     return self._session.applySettings({ label: label });
+                })
+                .then(function () { return self.initializeDevice(); });
+        });
+    };
+
+	TrezorDevice.prototype.applySettings = function (settings) {
+        var self = this;
+
+        if (settings.label.length > this.LABEL_MAX_LENGTH) {
+            settings.label = settings.label.slice(0, this.LABEL_MAX_LENGTH);
+        }
+
+        return self.withLoading(function () {
+            return self._session.initialize()
+                .then(function () {
+                    return self._session.applySettings(settings);
                 })
                 .then(function () { return self.initializeDevice(); });
         });

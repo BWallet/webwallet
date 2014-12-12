@@ -1,7 +1,7 @@
 /*global angular*/
 
 /**
- * Header Controller
+ * Language Controller
  *
  * Set language.
  *
@@ -13,15 +13,19 @@ angular.module('webwalletApp').controller('LanguageCtrl', function (
     $translate) {
 
     'use strict';
+    
+    var ENGLISH = 'english', CHINESE = 'chinese';
 
     angular.element("#nav-language").click(function () {
         $scope.toggleLanguage();
         return false;
     });
-
+    
+    $rootScope.languages = [{code: ENGLISH, label: 'English'}, {code: CHINESE, label: '中文'}];
+    
     $rootScope.$on('$translateChangeEnd', function (event, args) {
         console.log('[LanguageCtrl] current language: ', args.language);
-        $rootScope.language = args.language;
+        $rootScope.language = localeToLanguage(args.language);
         
         $translate('logo-img').then(function (translation) {
             angular.element("#logo-img").attr('src', translation);
@@ -33,11 +37,19 @@ angular.module('webwalletApp').controller('LanguageCtrl', function (
             }
         });
     });
+    
+    function localeToLanguage(locale) {
+    	if (locale && locale.indexOf('zh') >= 0) {
+    		return CHINESE;
+    	} else {
+    		return ENGLISH;
+    	}
+    }
 
     $scope.toggleLanguage = function () {
-    	if ($rootScope.language == 'en')
-            $translate.use('zh');
-        else 
+    	if ($rootScope.language == CHINESE)
             $translate.use('en');
+        else 
+            $translate.use('zh');
     }
 });

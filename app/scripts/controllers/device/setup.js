@@ -14,16 +14,16 @@ angular.module('webwalletApp').controller('DeviceSetupCtrl', function (
     $scope.advanced = false;
     $scope.settings = {
         pin_protection: true,
-        language: 'en'
+        language: $scope.device.DEFAULT_LANGUAGE
     };
-    
+
     if ($rootScope.language) {
     	$scope.settings.language = $rootScope.language;
     }
-    $rootScope.$on('$translateChangeEnd', function (event, args) {
-        $scope.settings.language = args.language;
+    $rootScope.$watch('language',function(){
+    	$scope.settings.language = $rootScope.language;
     });
-    $scope.languages = [{code: 'en', label: 'English'}, {code: 'zh', label: '中文'}];
+    $scope.languages = $rootScope.languages;
 
     // `recoveryWords` count depends on users choice and gets
     // initialized in `setupDevice`

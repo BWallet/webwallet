@@ -16,16 +16,16 @@ angular.module('webwalletApp').controller('DeviceRecoveryCtrl', function (
     $scope.seedWordlist = bip39.english;
     $scope.settings = {
         pin_protection: true,
-        language: 'en'
+        language: $scope.device.DEFAULT_LANGUAGE
     };
 
     if ($rootScope.language) {
     	$scope.settings.language = $rootScope.language;
     }
-    $rootScope.$on('$translateChangeEnd', function (event, args) {
-        $scope.settings.language = args.language;
+    $rootScope.$watch('language',function(){
+    	$scope.settings.language = $rootScope.language;
     });
-    $scope.languages = [{code: 'en', label: 'English'}, {code: 'zh', label: '中文'}];
+    $scope.languages = $rootScope.languages;
 
     $scope.$on('device.word', promptWord);
 

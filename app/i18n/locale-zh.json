@@ -120,7 +120,7 @@
     "device.index.hint-message" : "将鼠标悬停在账户公钥上可以显示它的二维码。把它扫描到支持XPUBs的手机应用程序（如：<a target='_blank' href='https://play.google.com/store/apps/details?id=com.satoshilabs.btcreceive'>myTREZOR Lite</a>安卓版），然后你就可以在任何地点观察你的交易和接收付款而无需随身携带你的BWallet！",
     "device.index.wipe-device" : "重置设备",
     
-    "device.index.info.change-label" : "修改标签",
+    "device.index.info.change-label" : "修改标签和语言",
     "device.index.info.total-balance" : "总余额",
     "device.index.info.pin-protection" : "PIN保护:",
     "device.index.info.pin-protection-enabled" : "启用",
@@ -274,7 +274,9 @@
     "modal.firmware.update-failed" : "更新失败",
     
     "modal.label.close" : "关闭",
-    "modal.label.enter-label" : "请输入设备标签",
+    "modal.label.enter-label" : "请输入设备标签和语言",
+    "modal.label.label" : "设备标签",
+    "modal.label.language" : "设备语言",
     "modal.label.change" : "修改",
     
     "modal.passphrase.close" : "关闭",

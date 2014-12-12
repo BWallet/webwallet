@@ -6,6 +6,7 @@
 angular.module('webwalletApp').controller('DeviceCtrl', function (
     $modal,
     $scope,
+    $rootScope,
     $location,
     $routeParams,
     $document,
@@ -113,9 +114,9 @@ angular.module('webwalletApp').controller('DeviceCtrl', function (
      */
     $scope.changeLabel = function () {
         promptLabel()
-            .then(function (label) {
-                label = label.trim() || $scope.device.DEFAULT_LABEL;
-                return $scope.device.changeLabel(label);
+            .then(function (settings) {
+                settings.label = settings.label.trim() || $scope.device.DEFAULT_LABEL;
+                return $scope.device.applySettings(settings);
             })
             .then(
                 function () {
@@ -216,14 +217,16 @@ angular.module('webwalletApp').controller('DeviceCtrl', function (
     function promptLabel() {
         var scope,
             modal;
-
+        
         scope = angular.extend($scope.$new(), {
-            label: $scope.device.features.label || ''
+            label: $scope.device.features.label || '',
+            language: $scope.device.features.language || $scope.device.DEFAULT_LANGUAGE,
+            languages: $rootScope.languages
         });
 
         modal = $modal.open({
             templateUrl: 'views/modal/label.html',
-            size: 'sm',
+            //size: 'sm',
             windowClass: 'labelmodal',
             backdrop: 'static',
             keyboard: false,
