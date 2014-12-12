@@ -6,6 +6,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
     config,
     utils,
     TrezorAccount,
+    $rootScope,
     BigInteger) {
 
     'use strict';
@@ -214,7 +215,8 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
             if (!self.isConnected()) // return falsey to cancel endure()
                 return false;
 
-            return self._session.initialize().then(
+            // language option for bootloader mode
+            return self._session.initialize($rootScope.language).then(
                 function (features) {
                     self.error = null;
                     return features;
