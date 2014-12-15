@@ -15,13 +15,14 @@
   </head>
   <body>
     <!--[if lt IE 9]>
-    <div class="browsehappy alert alert-warning">
+    <div class="browsehappy alert alert-warning" id="browsehappy-container">
       <h4>You are using an <strong>outdated</strong> browser.</h4>
       Please <a href="http://browsehappy.com">upgrade your browser</a>
       to improve your experience.
     </div>
     <![endif]-->
 
+    <!--[if gte IE 9 | !IE ]><!-->
     <div class="page-header navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -141,6 +142,7 @@
         </span>
       </div>
     </div>
+    <!--<![endif]-->
 
     <!-- build:js scripts/libs.js -->
     <script src="bower_components/lodash/dist/lodash.js"></script>
@@ -239,3 +241,15 @@
     <!-- endbuild -->
   </body>
 </html>
+<script>
+	var lang = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+	if (lang.indexOf("zh") == 0) {
+		var elem = document.getElementById('browsehappy-container');
+		var zhHtml = "<h3>你正在使用一个<strong>过时的</strong>浏览器。</h3>" + 
+		    "<br/><big>请<a href='http://browsehappy.com'>升级你的浏览器</a>以获得更好的体验。</big>" + 
+		    "<br/><br/><small><small>建议使用谷歌浏览器、火狐浏览器或者IE9及以上版本浏览器。 </small></small>";
+		if (elem) {
+			elem.innerHTML = zhHtml;
+		}
+	}
+</script>
