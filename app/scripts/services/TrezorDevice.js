@@ -23,6 +23,17 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
         this._desc = null;
         this._statusLabel = null;
         this._loadingLevel = 0;
+        
+        this._language = this.DEFAULT_LANGUAGE;
+        if ($rootScope.language) {
+    	    this._language = $rootScope.language;
+        }
+        $rootScope.$watch('language',function(){
+    	    this._language = $rootScope.language;
+    	    if (this._session) {
+    	    	this._session.setLanguage(this._language);
+    	    }
+        }.bind(this));
     }
 
     TrezorDevice.prototype.DEFAULT_LABEL = 'My BWallet';
@@ -175,6 +186,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
 
     TrezorDevice.prototype.connect = function (session) {
         this._session = session;
+        this._session.setLanguage(this._language);
         this.on = this._session.on.bind(this._session);
         this.once = this._session.once.bind(this._session);
         this.removeListener = this._session.removeListener.bind(this._session);
