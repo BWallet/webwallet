@@ -5,6 +5,7 @@ angular.module('webwalletApp').controller('DeviceSetupCtrl', function (
     flash,
     $scope,
     $rootScope,
+    $translate,
     $modal) {
 
     'use strict';
@@ -66,11 +67,11 @@ angular.module('webwalletApp').controller('DeviceSetupCtrl', function (
         dev.reset(set).then(
             function () {
                 utils.redirect('/device/' + dev.id).then(function () {
-                    flash.success('Congratulations! Your device is now ready to use.');
+                    flash.success($translate.instant('js.controllers.device.setup.setup-successful'));
                 });
             },
             function (err) {
-                flash.error(err.message || 'Setup failed');
+                flash.error(err.message || $translate.instant('js.controllers.device.setup.setup-failed'));
             }
         );
     };

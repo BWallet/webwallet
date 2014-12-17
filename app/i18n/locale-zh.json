@@ -9,6 +9,11 @@
     "nav-support" : "技术支持",
     "nav-language" : "English",
     
+    "error" : "出错了",
+    "success" : "成功",
+    "warning" : "警告",
+    "info" : "提示",
+    
     "index.firmware.title" : "发现新版本BWallet固件。",
     "index.firmware.message" : "升级以使用新特性或修复缺陷。",
     "index.firmware.show-details" : "查看详情",
@@ -311,6 +316,29 @@
     "modal.setup.write" : "请记录恢复种子的第{{ recoveryCurrentWord }}个单词。",
     "modal.setup.check-message" : "即将再次显示这{{ recoveryWords }}个单词。<strong>请仔细检查以确保你记录的是正确的。</strong>",
     "modal.setup.check" : "请检查恢复种子的第{{ recoveryCurrentWord }}个单词。",
+    
+    "js.controllers.nav.add-account-failed" :  "添加账户失败。",
+    
+    "js.controllers.account.send.qr-code-not-contain-address" : "提供的二维码没有包含一个有效的比特币地址",
+    "js.controllers.account.send.successfully-sent" : "交易<a href='{{url}}' target='_blank' title='去{{title}}查看交易信息'>{{hashHex}}</a>已经成功发送。",
+    "js.controllers.account.send.send-failed-and-resend-suggest" : "交易发送失败: {{message}}.<br><br> 十六进制格式的交易数据:<br> <span class='text-monospace'>{{bytes}}</span><br> 你可以使用<a href='https://blockchain.info/pushtx' target='_blank'>Blockchain.info的交易广播工具</a>尝试重新发送该交易",
+    "js.controllers.account.send.send-failed" : "交易发送失败: ",
+    
+    "js.controllers.device.device.pin-change-successful" : "PIN修改成功",
+    "js.controllers.device.device.pin-change-failed" : "PIN修改失败",
+    "js.controllers.device.device.label-change-successful" : "标签修改成功",
+    "js.controllers.device.device.label-change-failed" : "标签修改失败",
+    
+    "js.controllers.device.load.importing-failed" : "导入失败",
+    
+    "js.controllers.device.recovery.recovery-failed" : "恢复失败",
+    
+    "js.controllers.device.setup.setup-successful" : "恭喜你！你的设备现在可以使用了。",
+    "js.controllers.device.setup.setup-failed" : "设置失败",
+    
+    "js.controllers.device.wipe.wiping-failed" : "重置失败",
+    
+    "js.services.DeviceList.loading-failed" : "设备加载失败",
     
     "end" : "end"
 }

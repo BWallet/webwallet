@@ -15,6 +15,7 @@ angular.module('webwalletApp').factory('deviceList', function (
     trezorApi,
     TrezorDevice,
     ItemStorage,
+    $translate,
     $location) {
 
     'use strict';
@@ -398,7 +399,7 @@ angular.module('webwalletApp').factory('deviceList', function (
             // Show error message if something failed.
                 .catch(function (err) {
                     if (!err instanceof this.DeviceListException) {
-                        flash.error(err.message || 'Loading device failed');
+                        flash.error(err.message || $translate.instant('js.services.DeviceList.loading-failed'));
                     }
                 }.bind(this));
         }.bind(this));

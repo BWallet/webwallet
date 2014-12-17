@@ -9,6 +9,11 @@
     "nav-support" : "Support",
     "nav-language" : "中文",
     
+    "error" : "error",
+    "success" : "success",
+    "warning" : "warning",
+    "info" : "info",
+    
     "index.firmware.title" : "New BWallet firmware is available.",
     "index.firmware.message" : "Upgrade for the newest features and bug fixes.",
     "index.firmware.show-details" : "Show details",
@@ -311,6 +316,29 @@
     "modal.setup.write" : "Please write down the {{recoveryCurrentWord | ordinal}} word of your recovery seed.",
     "modal.setup.check-message" : "We will now show you the {{recoveryWords}} words again. <strong>Please check carefully that you wrote them down correctly.</strong>",
     "modal.setup.check" : "Please check the {{recoveryCurrentWord | ordinal}} word of your recovery seed.",
+    
+    "js.controllers.nav.add-account-failed" :  "Failed to add account.",
+    
+    "js.controllers.account.send.qr-code-not-contain-address" : "Provided QR code does not contain valid address",
+    "js.controllers.account.send.successfully-sent" : "Transaction <a href='{{url}}' target='_blank' title='Transaction info at {{title}}'>{{hashHex}}</a> was successfully sent.",
+    "js.controllers.account.send.send-failed-and-resend-suggest" : "Failed to send transaction: {{message}}.<br><br> Raw transaction in hex format:<br> <span class='text-monospace'>{{bytes}}</span><br> You can try to resend this transaction using <a href='https://blockchain.info/pushtx' target='_blank'>Blockchain.info's Broadcast Transaction tool</a>",
+    "js.controllers.account.send.send-failed" : "Failed to send transaction: ",
+    
+    "js.controllers.device.device.pin-change-successful" : "PIN was successfully changed",
+    "js.controllers.device.device.pin-change-failed" : "PIN change failed",
+    "js.controllers.device.device.label-change-successful" : "Label was successfully changed",
+    "js.controllers.device.device.label-change-failed" : "Failed to change the device label",
+    
+    "js.controllers.device.load.importing-failed" : "Importing failed",
+    
+    "js.controllers.device.recovery.recovery-failed" : "Recovery failed",
+    
+    "js.controllers.device.setup.setup-successful" : "Congratulations! Your device is now ready to use.",
+    "js.controllers.device.setup.setup-failed" : "Setup failed",
+    
+    "js.controllers.device.wipe.wiping-failed" : "Wiping failed",
+    
+    "js.services.DeviceList.loading-failed" : "Loading device failed",
     
     "end" : "end"
 }

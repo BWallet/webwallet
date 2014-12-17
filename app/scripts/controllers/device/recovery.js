@@ -5,6 +5,7 @@ angular.module('webwalletApp').controller('DeviceRecoveryCtrl', function (
     flash,
     $scope,
     $rootScope,
+    $translate,
     $location) {
 
     'use strict';
@@ -51,7 +52,7 @@ angular.module('webwalletApp').controller('DeviceRecoveryCtrl', function (
             },
             function (err) {
                 $scope.recovering = false;
-                flash.error(err.message || 'Recovery failed');
+                flash.error(err.message || $translate.instant('js.controllers.device.recovery.recovery-failed'));
             }
         );
     };

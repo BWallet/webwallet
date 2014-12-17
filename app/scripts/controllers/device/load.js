@@ -4,6 +4,7 @@ angular.module('webwalletApp').controller('DeviceLoadCtrl', function (
     flash,
     $scope,
     $rootScope,
+    $translate,
     $location) {
 
     'use strict';
@@ -24,7 +25,6 @@ angular.module('webwalletApp').controller('DeviceLoadCtrl', function (
     $scope.loadDevice = function () {
         var set = $scope.settings,
             dev = $scope.device;
-        alert(set.language);
 
         if (set.label)
             set.label = set.label.trim();
@@ -32,7 +32,7 @@ angular.module('webwalletApp').controller('DeviceLoadCtrl', function (
 
         dev.load(set).then(
             function () { $location.path('/device/' + dev.id); },
-            function (err) { flash.error(err.message || 'Importing failed'); }
+            function (err) { flash.error(err.message || $translate.instant('js.controllers.device.load.importing-failed')); }
         );
     };
 

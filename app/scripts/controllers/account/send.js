@@ -12,6 +12,7 @@ angular.module('webwalletApp').controller('AccountSendCtrl', function (
     $routeParams,
     $q,
     $modal,
+    $translate,
     $http) {
 
     'use strict';
@@ -286,7 +287,7 @@ angular.module('webwalletApp').controller('AccountSendCtrl', function (
 
         values = parseQr(val);
         if (!values) {
-            return flash.error('Provided QR code does not contain valid address');
+            return flash.error($translate.instant('js.controllers.account.send.qr-code-not-contain-address'));
         }
 
         output = $scope.tx.values.outputs[$scope.qr.outputIndex];
@@ -389,6 +390,7 @@ angular.module('webwalletApp').controller('AccountSendCtrl', function (
                     res.hashRev = res.hash.slice();
                     res.hashRev.reverse();
                     var hashHex = utils.bytesToHex(res.hashRev);
+                    /*
                     flash.success({
                         template: [
                             'Transaction <a href="{{url}}" target="_blank" ',
@@ -399,12 +401,21 @@ angular.module('webwalletApp').controller('AccountSendCtrl', function (
                         url: config.blockExplorers[config.coin].urlTx + hashHex,
                         title: config.blockExplorers[config.coin].name
                     });
+                    */
+                    flash.success({
+                    	template : $translate.instant('js.controllers.account.send.successfully-sent', {
+                            hashHex : hashHex,
+                            url : config.blockExplorers[config.coin].urlTx + hashHex,
+                            title : config.blockExplorers[config.coin].name
+                        })
+                    });
                 });
             },
             function (err) {
                 $scope.sending = false;
 
                 if (err.value && err.value.bytes) {
+                    /*
                     flash.error({
                         template: [
                             'Failed to send transaction: {{message}}.<br><br>',
@@ -418,11 +429,20 @@ angular.module('webwalletApp').controller('AccountSendCtrl', function (
                         message: err.message,
                         show_raw_tx: false
                     });
+                    */
+                    
+                    flash.error({
+                    	template : $translate.instant('js.controllers.account.send.send-failed-and-resend-suggest', {
+                            bytes: utils.bytesToHex(err.value.bytes),
+                            message: err.message
+                        })
+                    });
+                    
                     return;
                 }
 
                 flash.error([
-                    'Failed to send transaction: ',
+                    $translate.instant('js.controllers.account.send.send-failed'),
                     err.message,
                     '.'
                 ].join(''));

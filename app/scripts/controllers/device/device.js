@@ -10,6 +10,7 @@ angular.module('webwalletApp').controller('DeviceCtrl', function (
     $location,
     $routeParams,
     $document,
+    $translate,
     flash,
     TrezorDevice,
     deviceList,
@@ -98,10 +99,10 @@ angular.module('webwalletApp').controller('DeviceCtrl', function (
     $scope.changePin = function () {
         $scope.device.changePin().then(
             function () {
-                flash.success('PIN was successfully changed');
+                flash.success($translate.instant('js.controllers.device.device.pin-change-successful'));
             },
             function (err) {
-                flash.error(err.message || 'PIN change failed');
+                flash.error(err.message || $translate.instant('js.controllers.device.device.pin-change-failed'));
             }
         );
     };
@@ -120,7 +121,7 @@ angular.module('webwalletApp').controller('DeviceCtrl', function (
             })
             .then(
                 function () {
-                    flash.success('Label was successfully changed');
+                    flash.success($translate.instant('js.controllers.device.device.label-change-successful'));
                 },
                 function (err) {
                     /*
@@ -130,7 +131,7 @@ angular.module('webwalletApp').controller('DeviceCtrl', function (
                      */
                     if (err) {
                         flash.error(err.message ||
-                                    'Failed to change the device label');
+                                    $translate.instant('js.controllers.device.device.label-change-failed'));
                     }
                 }
             );

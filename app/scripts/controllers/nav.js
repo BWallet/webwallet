@@ -11,6 +11,7 @@ angular.module('webwalletApp').controller('NavCtrl', function (
     $scope,
     $location,
     deviceList,
+    $translate,
     flash) {
 
     'use strict';
@@ -33,7 +34,7 @@ angular.module('webwalletApp').controller('NavCtrl', function (
                 $scope.addingInProgress = false;
             },
             function (err) {
-                flash.error(err.message || 'Failed to add account.');
+                flash.error(err.message || $translate.instant('js.controllers.nav.add-account-failed'));
             }
         );
     };

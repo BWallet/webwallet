@@ -4,6 +4,7 @@ angular.module('webwalletApp').controller('DeviceWipeCtrl', function (
     $scope,
     flash,
     deviceList,
+    $translate,
     $modal) {
 
     'use strict';
@@ -60,7 +61,7 @@ angular.module('webwalletApp').controller('DeviceWipeCtrl', function (
             },
             function (err) {
                 _wipeInProgress = false;
-                flash.error(err.message || 'Wiping failed');
+                flash.error(err.message || $translate.instant('js.controllers.device.wipe.wiping-failed'));
             }
         );
     };
