@@ -340,5 +340,16 @@
     
     "js.services.DeviceList.loading-failed" : "设备加载失败",
     
+    "js.services.firmwareService.invalid-firmware" : "下载的固件是无效的",
+    
+    "js.services.TrezorAccount.parse-transaction-failed" : "解析已签名的交易失败",
+    "js.services.TrezorAccount.verify-transaction-failed" : "验证已签名的交易失败",
+    "js.services.TrezorAccount.send-transaction-failed" : "发送交易到后台失败。服务器返回：`",
+    "js.services.TrezorAccount.amount-too-low" : "金额过低",
+    "js.services.TrezorAccount.invalid-address" : "无效的地址",
+    "js.services.TrezorAccount.invalid-address-version" : "无效的地址版本",
+    
+    "js.services.TrezorDevice.cannot-hide-account" : "不能隐藏这个帐户",
+    
     "end" : "end"
 }

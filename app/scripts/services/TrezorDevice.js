@@ -7,6 +7,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
     utils,
     TrezorAccount,
     $rootScope,
+    $translate,
     BigInteger) {
 
     'use strict';
@@ -347,7 +348,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
 
     TrezorDevice.prototype.hideAccount = function (acc) {
         if (!this.canHideAccount(acc))
-            throw new Error('Cannot hide this account');
+            throw new Error($translate.instant('js.services.TrezorDevice.cannot-hide-account'));
 
         return _.remove(this.accounts, { id: acc.id });
     };

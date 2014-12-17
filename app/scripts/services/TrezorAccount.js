@@ -318,10 +318,10 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
                     txHash;
 
                 if (!parsedTx)
-                    throw new Error('Failed to parse signed transaction');
+                    throw new Error($translate.instant('js.services.TrezorAccount.parse-transaction-failed'));
 
                 if (!self._verifyTx(tx, parsedTx))
-                    throw new Error('Failed to verify signed transaction');
+                    throw new Error($translate.instant('js.services.TrezorAccount.verify-transaction-failed'));
 
                 txBytes = utils.hexToBytes(serializedTx);
                 txHash = utils.sha256x2(txBytes, { asBytes: true });
@@ -334,7 +334,7 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
                 }, function (err) {
                     throw new TrezorAccountException({
                         message: err.message ||
-                            'Failed to send transaction to the backend. Server returned: `'
+                            $translate.instant('js.services.TrezorAccount.send-transaction-failed')
                             + JSON.stringify(err) + '`.',
                         bytes: txBytes
                     });
@@ -452,18 +452,18 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
             addrVals;
 
         if (amount < MIN_OUTPUT_AMOUNT)
-            throw new TxOutputException('Amount is too low', this.FIELD_AMOUNT);
+            throw new TxOutputException($translate.instant('js.services.TrezorAccount.amount-too-low'), this.FIELD_AMOUNT);
 
         addrVals = utils.decodeAddress(address);
         if (!addrVals)
-            throw new TxOutputException('Invalid address', this.FIELD_ADDRESS);
+            throw new TxOutputException($translate.instant('js.services.TrezorAccount.invalid-address'), this.FIELD_ADDRESS);
 
         if (addrVals.version === +addrType)
             scriptType = 'PAYTOADDRESS';
         if (!scriptType && scriptTypes && scriptTypes[addrVals.version])
             scriptType = scriptTypes[addrVals.version];
         if (!scriptType)
-            throw new TxOutputException('Invalid address version',
+            throw new TxOutputException($translate.instant('js.services.TrezorAccount.invalid-address-version'),
                                         this.FIELD_ADDRESS);
 
         return {

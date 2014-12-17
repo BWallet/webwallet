@@ -11,6 +11,7 @@ angular.module('webwalletApp').service('firmwareService', function FirmwareServi
     FIRMWARE_LIST_URL,
     $http,
     $rootScope,
+    $translate,
     deviceList) {
 
     'use strict';
@@ -137,7 +138,7 @@ angular.module('webwalletApp').service('firmwareService', function FirmwareServi
     this.download = function (firmware) {
         return $http.get(firmware.url).then(function (res) {
             if (!_validate(res.data)) {
-                throw new Error('Downloaded firmware is invalid');
+                throw new Error($translate.instant('js.services.firmwareService.invalid-firmware'));
             }
             return res.data;
         });

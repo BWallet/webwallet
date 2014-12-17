@@ -340,5 +340,16 @@
     
     "js.services.DeviceList.loading-failed" : "Loading device failed",
     
+    "js.services.firmwareService.invalid-firmware" : "Downloaded firmware is invalid",
+    
+    "js.services.TrezorAccount.parse-transaction-failed" : "Failed to parse signed transaction",
+    "js.services.TrezorAccount.verify-transaction-failed" : "Failed to verify signed transaction",
+    "js.services.TrezorAccount.send-transaction-failed" : "Failed to send transaction to the backend. Server returned: `",
+    "js.services.TrezorAccount.amount-too-low" : "Amount is too low",
+    "js.services.TrezorAccount.invalid-address" : "Invalid address",
+    "js.services.TrezorAccount.invalid-address-version" : "Invalid address version",
+    
+    "js.services.TrezorDevice.cannot-hide-account" : "Cannot hide this account",
+    
     "end" : "end"
 }
