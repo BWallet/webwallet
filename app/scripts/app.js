@@ -237,7 +237,7 @@
     function registerUriHandler() {
         var URI_PROTOCOL = 'bitcoin',
             URI_TEMPLATE = '/#/send/%s',
-            URI_NAME = 'MyTrezor: Send Bitcoins to address',
+            URI_NAME = 'MyBWallet: Send Bitcoins to address',
             url;
 
         url = location.protocol + '//' + location.host + URI_TEMPLATE;
