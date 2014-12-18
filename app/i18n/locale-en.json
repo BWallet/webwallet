@@ -17,9 +17,7 @@
     "index.firmware.title" : "New BWallet firmware is available.",
     "index.firmware.message" : "Upgrade for the newest features and bug fixes.",
     "index.firmware.show-details" : "Show details",
-    "index.footer-company" : "Bidingxing",
-    "index.footer-based-on-1" : "Backend based on ",
-    "index.footer-based-on-2" : "",
+    "index.footer" : "Copyright &copy; 2014 <a href='http://bidingxing.com/' target='_blank'>Bidingxing</a> | Backend based on <a href='https://libbitcoin.org/' target='_blank'>libbitcoin</a>",
     
     "debug.button.show-log" : "Show log",
     

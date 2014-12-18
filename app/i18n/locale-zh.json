@@ -17,9 +17,7 @@
     "index.firmware.title" : "发现新版本BWallet固件。",
     "index.firmware.message" : "升级以使用新特性或修复缺陷。",
     "index.firmware.show-details" : "查看详情",
-    "index.footer-company" : "币定行",
-    "index.footer-based-on-1" : "后端基于",
-    "index.footer-based-on-2" : "开发",
+    "index.footer" : "Copyright &copy; 2014 <a href='http://bidingxing.com/' target='_blank'>币定行</a> | 后端基于 <a href='https://libbitcoin.org/' target='_blank'>libbitcoin</a> 开发",
     
     "debug.button.show-log" : "显示日志",
     
