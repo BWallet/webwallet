@@ -119,7 +119,7 @@
     "device.index.xpub-advice" : "Be careful with your account XPUB.",
     "device.index.xpub-advice-message" : "When you give it to a third party, you allow it to see the whole transaction history of your account.",
     "device.index.hint" : "Hint:",
-    "device.index.hint-message" : "Hover over the account public key to show its QR code. Scan it into an application that supports XPUBs such as <a target='_blank' href='https://play.google.com/store/apps/details?id=com.satoshilabs.btcreceive'>myTREZOR Lite</a> for Android. Afterwards you can watch your transactions and receive payments everywhere without carrying your  around!",
+    "device.index.hint-message" : "Hover over the account public key to show its QR code. Scan it into an application that supports XPUBs. Afterwards you can watch your transactions and receive payments everywhere without carrying your  around!",
     "device.index.wipe-device" : "Wipe device",
     
     "device.index.info.change-label" : "Change label and language",

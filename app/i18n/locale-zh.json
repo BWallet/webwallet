@@ -119,7 +119,7 @@
     "device.index.xpub-advice" : "请妥善保管你的账户公钥。",
     "device.index.xpub-advice-message" : "如果你将它交予第三者，则意味允许他查看账户的所有交易历史。",
     "device.index.hint" : "提示:",
-    "device.index.hint-message" : "将鼠标悬停在账户公钥上可以显示它的二维码。把它扫描到支持XPUBs的手机应用程序（如：<a target='_blank' href='https://play.google.com/store/apps/details?id=com.satoshilabs.btcreceive'>myTREZOR Lite</a>安卓版），然后你就可以在任何地点观察你的交易和接收付款而无需随身携带你的BWallet！",
+    "device.index.hint-message" : "将鼠标悬停在账户公钥上可以显示它的二维码。把它扫描到支持XPUBs的手机应用程序，然后你就可以在任何地点观察你的交易和接收付款而无需随身携带你的BWallet！",
     "device.index.wipe-device" : "重置设备",
     
     "device.index.info.change-label" : "修改标签和语言",
