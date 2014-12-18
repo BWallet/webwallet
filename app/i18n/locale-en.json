@@ -63,8 +63,7 @@
     "account.nav.sign-and-verify" : "Sign & Verify",
     "account.nav.sign-and-verify-tooltip" : "Please connect your device to sign a message.",
     
-    "account.common.account-inconsistent-warning" : "Warning!",
-    "account.common.account-inconsistent-message" : "Account balance information is inconsistent.",
+    "account.common.account-inconsistent-warning" : "<strong>Warning!</strong> Account balance information is inconsistent.",
     
     "account.index.timestamp" : "Timestamp",
     "account.index.address" : "Address",

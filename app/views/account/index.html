@@ -2,8 +2,8 @@
   <div ng-controller="AccountCtrl">
 
     <div class="alert alert-danger alert-inconsistent"
-         ng-show="account.isInconsistent()">
-      <strong translate="account.common.account-inconsistent-warning">Warning!</strong> {{ 'account.common.account-inconsistent-message' | translate }}
+         ng-show="account.isInconsistent()" translate="account.common.account-inconsistent-warning">
+      <strong>Warning!</strong> Account balance information is inconsistent.
     </div>
 
     <ng-include src="'views/account/nav.html'"></ng-include>
