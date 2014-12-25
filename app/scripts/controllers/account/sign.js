@@ -3,6 +3,7 @@
 angular.module('webwalletApp').controller('AccountSignCtrl', function (
     utils,
     deviceList,
+    $translate,
     $scope) {
 
     'use strict';
@@ -67,7 +68,7 @@ angular.module('webwalletApp').controller('AccountSignCtrl', function (
                 $scope.sign.res = {
                     status: 'error',
                     message: [
-                        'Failed to sign message: ',
+                        $translate.instant('js.controllers.account.sign.sign-failed'),
                         err.message,
                         '.'
                     ].join('')
@@ -90,7 +91,7 @@ angular.module('webwalletApp').controller('AccountSignCtrl', function (
             $scope.verify.res = {
                 status: 'error',
                 message: [
-                    'Please fill the address.'
+                    $translate.instant('js.controllers.account.sign.fill-address')
                 ].join('')
             };
             return;
@@ -103,7 +104,7 @@ angular.module('webwalletApp').controller('AccountSignCtrl', function (
         } catch (e) {
             $scope.verify.res = {
                 status: 'error',
-                message: 'Failed to verify message: Invalid signature.'
+                message: $translate.instant('js.controllers.account.sign.verify-failed-invalid-signature')
             };
             return;
         }
@@ -112,14 +113,14 @@ angular.module('webwalletApp').controller('AccountSignCtrl', function (
             function () {
                 $scope.verify.res = {
                     status: 'success',
-                    message: 'Message verified.'
+                    message: $translate.instant('js.controllers.account.sign.verified-successful')
                 };
             },
             function (err) {
                 $scope.verify.res = {
                     status: 'error',
                     message: [
-                        'Failed to verify message: ',
+                        $translate.instant('js.controllers.account.sign.verify-failed'),
                         err.message,
                         '.'
                     ].join('')

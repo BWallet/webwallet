@@ -321,6 +321,12 @@
     "js.controllers.account.send.send-failed-and-resend-suggest" : "交易发送失败: {{message}}.<br><br> 十六进制格式的交易数据:<br> <span class='text-monospace'>{{bytes}}</span><br> 你可以使用<a href='https://blockchain.info/pushtx' target='_blank'>Blockchain.info的交易广播工具</a>尝试重新发送该交易",
     "js.controllers.account.send.send-failed" : "交易发送失败: ",
     
+    "js.controllers.account.sign.sign-failed" : "消息签名失败: ",
+    "js.controllers.account.sign.fill-address" : "请输入地址.",
+    "js.controllers.account.sign.verify-failed-invalid-signature" : "消息验证失败: 无效的签名.",
+    "js.controllers.account.sign.verified-successful" : "消息验证成功.",
+    "js.controllers.account.sign.verify-failed" : "消息验证失败: ",
+    
     "js.controllers.device.device.pin-change-successful" : "PIN码修改成功",
     "js.controllers.device.device.pin-change-failed" : "PIN码修改失败",
     "js.controllers.device.device.label-change-successful" : "标签修改成功",

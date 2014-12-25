@@ -321,6 +321,12 @@
     "js.controllers.account.send.send-failed-and-resend-suggest" : "Failed to send transaction: {{message}}.<br><br> Raw transaction in hex format:<br> <span class='text-monospace'>{{bytes}}</span><br> You can try to resend this transaction using <a href='https://blockchain.info/pushtx' target='_blank'>Blockchain.info's Broadcast Transaction tool</a>",
     "js.controllers.account.send.send-failed" : "Failed to send transaction: ",
     
+    "js.controllers.account.sign.sign-failed" : "Failed to sign message: ",
+    "js.controllers.account.sign.fill-address" : "Please fill the address.",
+    "js.controllers.account.sign.verify-failed-invalid-signature" : "Failed to verify message: Invalid signature.",
+    "js.controllers.account.sign.verified-successful" : "Message verified.",
+    "js.controllers.account.sign.verify-failed" : "Failed to verify message: ",
+    
     "js.controllers.device.device.pin-change-successful" : "PIN was successfully changed",
     "js.controllers.device.device.pin-change-failed" : "PIN change failed",
     "js.controllers.device.device.label-change-successful" : "Label was successfully changed",
