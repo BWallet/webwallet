@@ -3,9 +3,10 @@
 set -e
 cd `dirname $0`
 
-rm -rf www-old
-touch www
-mv www www-old
-cp -r dist www
+sudo rm -rf ../../../../mybwallet.com/www-old
+sudo touch ../../../../mybwallet.com/www
+sudo mv ../../../../mybwallet.com/www ../../../../mybwallet.com/www-old
+sudo cp -r dist ../../../../mybwallet.com/www
+sudo chown -R www-data:www-data ../../../../mybwallet.com/www
 
 echo "DONE"
