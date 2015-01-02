@@ -133,7 +133,7 @@
     "device.index.info.additional-passphrase" : "额外的种子密码:",
     "device.index.info.additional-passphrase-enabled" : "启用",
     "device.index.info.additional-passphrase-disabled" : "禁用",
-    "device.index.info.additional-passphrase-message" : "种子密码是额外的安全级别。你需要输入种子密码当你每次要访问钱包时。",
+    "device.index.info.additional-passphrase-message" : "种子密码是额外的安全级别。每次要访问BWallet的时候都需要输入该密码。",
     
     "device.wipe.connect-device-message" : "若要使用这个功能，<strong>请插入你的设备</strong>。",
     "device.wipe.wipe-device-confirmation" : "你真的要重置这个设备吗？",
@@ -162,11 +162,11 @@
     "device.setup.pin-protection-message-2" : "设置完成之后你可以随时重置或者修改你的PIN码。请妥善保管你的恢复卡。如果任何人得到你的恢复种子，他们能够偷窃你的比特币即使没有你的PIN码。",
     "device.setup.pin-protection-enable" : "启用PIN码保护",
     "device.setup.passphrase" : "额外的种子密码",
-    "device.setup.passphrase-message" : "使用种子密码增加额外的安全级别。你需要输入种子密码当你每次要访问钱包时。",
+    "device.setup.passphrase-message" : "使用种子密码增加额外的安全级别。每次要访问BWallet的时候都需要输入该密码。",
     "device.setup.passphrase-caution-title" : "种子密码只适合专家级用户使用，请谨慎使用。",
     "device.setup.passphrase-caution-content-1" : "种子密码可以看作种子的第25个单词，但它并没有保存在BWallet。如果你忘记你的种子密码，你的钱包将永久地丢失，并且绝对不可能恢复你的资金。<br>",
     "device.setup.passphrase-caution-content-2" : "如果你输入一个错误的种子密码，相当于创建了一个不同的钱包，这看起来像是你有一个0BTC的帐户。",
-    "device.setup.passphrase-caution-content-3" : "如果现在你选择使用种子密码，你以后将无法关掉它，反之亦然（如果你选择不使用它，你以后将无法开启它）。",
+    "device.setup.passphrase-caution-content-3" : "如果你现在选择使用种子密码，你以后将无法关掉它，反之亦然（如果你选择不使用它，你以后将无法开启它）。",
     "device.setup.passphrase-enable" : "我已经阅读以上所有信息以及我要开启种子密码。",
     "device.setup.continue" : "继续",
     
