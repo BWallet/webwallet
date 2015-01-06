@@ -315,7 +315,8 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
                     serializedTx = message.serialized.serialized_tx,
                     parsedTx = self._serializedToTx(serializedTx),
                     txBytes,
-                    txHash;
+                    txHash,
+                    publicMaster = self.publicKey();
 
                 if (!parsedTx)
                     throw new Error($translate.instant('js.services.TrezorAccount.parse-transaction-failed'));
@@ -326,16 +327,19 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
                 txBytes = utils.hexToBytes(serializedTx);
                 txHash = utils.sha256x2(txBytes, { asBytes: true });
 
-                return self._backend.send(txBytes, txHash).then(function () {
+                return self._backend.send(txBytes, txHash, publicMaster).then(function () {
                     return {
                         bytes: txBytes,
                         hash: txHash
                     };
                 }, function (err) {
+                	var errorMessage;
+                	if (err.data && err.data.message)
+                		errorMessage = err.data.message;
+                	else 
+                		errorMessage = $translate.instant('js.services.TrezorAccount.send-transaction-failed') + JSON.stringify(err) + '`.';
                     throw new TrezorAccountException({
-                        message: err.message ||
-                            $translate.instant('js.services.TrezorAccount.send-transaction-failed')
-                            + JSON.stringify(err) + '`.',
+                        message: errorMessage,
                         bytes: txBytes
                     });
                 });

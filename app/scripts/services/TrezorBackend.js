@@ -163,11 +163,12 @@ angular.module('webwalletApp').factory('TrezorBackend', function (
 
     // POST
 
-    TrezorBackend.prototype.send = function (txBytes, txHash) {
+    TrezorBackend.prototype.send = function (txBytes, txHash, publicMaster) {
         $log.log('[backend] Sending', txBytes);
         return $http.post(this._apiUrl('send'), {
             transaction: utils.bytesToBase64(txBytes),
-            transactionHash: utils.bytesToBase64(txHash)
+            transactionHash: utils.bytesToBase64(txHash),
+            publicMaster: publicMaster
         });
     };
 
