@@ -171,6 +171,8 @@
             ].join('');
             container.removeAttribute('ng-cloak');
         }
+        
+        angular.element("#app-loading").hide();
     }
 
     /**
