@@ -138,6 +138,13 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
         else
             return this.DEFAULT_LABEL;
     };
+    
+    TrezorDevice.prototype.bootloaderHash = function () {
+        if (this.features && this.features.bootloader_hash)
+            return this.features.bootloader_hash;
+        else
+            return '';
+    };
 
     TrezorDevice.prototype.statusLabel = function () {
         return this._statusLabel;
