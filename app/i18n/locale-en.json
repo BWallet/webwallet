@@ -30,7 +30,7 @@
     "error.plugin-loading-failed" : "Plugin loading failed :(",
     
     "error.install.get-started" : "Get started",
-    "error.install.download-and-install" : "Please download and install the <a href='http://java.com/en/download/index.jsp' target='_blank'>Java</a>. <br /> <strong>Or</strong> Enable Java in the browser. <br /> <strong>Why?</strong> The Java allows myBWallet to communicate with your BWallet device.",
+    "error.install.download-and-install" : "Please download and install the <a href='{{link}}' target='_blank'>Java</a>. <br /> <strong>Or</strong> Enable Java in the browser. <br /> <strong>Why?</strong> The Java allows myBWallet to communicate with your BWallet device.",
     "error.install.footer" : "myBWallet Web Wallet is a free service provided exclusively to <a href='#'>BWallet hardware wallet</a> owners.",
     
     "import.caution-content-1" : "This is an advanced interface intended for developer use only!",

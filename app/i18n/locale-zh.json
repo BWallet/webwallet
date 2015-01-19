@@ -30,7 +30,7 @@
     "error.plugin-loading-failed" : "插件加载失败 :(",
     
     "error.install.get-started" : "开始",
-    "error.install.download-and-install" : "请下载并安装<a href='http://java.com/en/download/index.jsp' target='_blank'>Java</a>。<br /> <strong>或者</strong>允许Java在浏览器运行。<br /> <strong>为什么？</strong>因为myBWallet需要通过Java与你的BWallet设备通讯。",
+    "error.install.download-and-install" : "请下载并安装<a href='{{link}}' target='_blank'>Java</a>。<br /> <strong>或者</strong>允许Java在浏览器运行。<br /> <strong>为什么？</strong>因为myBWallet需要通过Java与你的BWallet设备通讯。",
     "error.install.footer" : "myBWallet网页钱包是一个专门提供给<a href='#'>BWallet硬件钱包</a>用户的免费服务。",
     
     "import.caution-content-1" : "这是一个专门为开发者准备的高级界面！",

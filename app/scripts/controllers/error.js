@@ -44,5 +44,6 @@ angular.module('webwalletApp').controller('ErrorCtrl', function (
     } else {
         $scope.error = true;
         $scope.installed = trezorError.installed !== false;
+        $scope.javaLink = trezorError.javaLink;
     }
 });
