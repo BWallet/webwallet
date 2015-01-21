@@ -1,8 +1,12 @@
-<div class="row" ng-if="installed">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="alert alert-danger clearfix">
-      <h4 translate="error.plugin-loading-failed">Plugin loading failed :(</h4>
-      {{error.message}}
+<div class="modal-dialog"
+     ng-if="installed">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title alert alert-danger" translate="error.plugin-loading-failed">Plugin loading failed :(</h4>
+    </div>
+    <div class="modal-body">
+      <p class="lead" style='font-size:12px;' translate="{{pluginMessageKey}}" translate-values="{ guideURLs: guideURLs }">
+      </p>
       <ng-include src="'views/debug.button.html'"></ng-include>
     </div>
     <ng-include src="'views/debug.log.html'"></ng-include>
