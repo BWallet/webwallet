@@ -311,7 +311,7 @@
     "modal.pin.rating-strong" : "Strong",
     "modal.pin.rating-ultimate" : "Ultimate",
     "modal.pin.enter" : "Enter",
-    "modal.pin.help" : "Lost? Check our <a href='#' target='_blank'>user manual</a>.",
+    "modal.pin.help" : "Lost? Check our <a href='http://mybwallet.com/docs/faq/zh/bwallet_faq.html#pin' target='_blank'>user manual</a>.",
     
     "modal.qr.close" : "Cancel",
     "modal.qr.scan-address" : "Scan address from a QR code",

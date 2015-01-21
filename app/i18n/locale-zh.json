@@ -311,7 +311,7 @@
     "modal.pin.rating-strong" : "强",
     "modal.pin.rating-ultimate" : "极强",
     "modal.pin.enter" : "确定",
-    "modal.pin.help" : "忘记了？请查看<a href='#' target='_blank'>用户手册</a>。",
+    "modal.pin.help" : "忘记了？请查看<a href='http://mybwallet.com/docs/faq/zh/bwallet_faq.html#pin' target='_blank'>用户手册</a>。",
     
     "modal.qr.close" : "关闭",
     "modal.qr.scan-address" : "从二维码扫描地址",
