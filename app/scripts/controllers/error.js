@@ -87,8 +87,8 @@ angular.module('webwalletApp').controller('ErrorCtrl', function (
             	guidePlatformUrl += '-chrome.html';
         }
         
-        var guideEnableUrl = guidePlatformUrl + "#enable-java";
-        var guideEnableAppletUrl = guidePlatformUrl + "#enable-applet";
+        var guideEnableUrl = guidePlatformUrl + "#id3";
+        var guideEnableAppletUrl = guidePlatformUrl + "#bwallet";
         var guideSuitableUrl = guideUrl + "suitable-java.html";
         $scope.guideURLs = {};
         $scope.guideURLs.platform = guidePlatformUrl;
