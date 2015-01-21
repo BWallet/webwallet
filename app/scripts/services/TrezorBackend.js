@@ -104,7 +104,7 @@ angular.module('webwalletApp').factory('TrezorBackend', function (
         this._stream.catch(function (err) {
             $log.error('[backed] Stream error', err);
             self._stream = null;
-            self._clientIdP = null;
+            // self._clientIdP = null;
         });
 
         // process received messages

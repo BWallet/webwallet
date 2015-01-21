@@ -20,7 +20,7 @@
     angular.module('webwalletApp').config(function($translateProvider) {
         $translateProvider.useStaticFilesLoader({
             prefix : '/i18n/locale-',
-            suffix : '.json'
+            suffix : '.json?v=1'
         }); 
         $translateProvider.registerAvailableLanguageKeys(['en', 'zh'], {
             'en_US' : 'en',
