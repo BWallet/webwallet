@@ -1,11 +1,11 @@
-# Bitcoin web wallet with Trezor support
+# Bitcoin web wallet with BWallet support
 
-Bitcoin web wallet using Bitcoin Trezor as a private key storage.
+Bitcoin web wallet using Bitcoin BWallet as a private key storage.
 
 ## Installation
 
 	sudo npm install -g grunt-cli bower
-	git clone git@github.com:trezor/webwallet.git
+	git clone git@github.com:bwallet/webwallet.git
 	cd webwallet
 	git submodule update --recursive --init
 	bower install
@@ -22,10 +22,10 @@ location of signed plugin configuration).
 To run web wallet locally, please make sure your hosts file includes
 the following line:
 
-    127.0.0.1 localhost.mytrezor.com
+    127.0.0.1 localhost.mybwallet.com
 
 Afterwards you can run the local server. It'll be available on
-`http://localhost.mytrezor.com:8000`:
+`http://localhost.mybwallet.com:8000`:
 
     grunt server
 
