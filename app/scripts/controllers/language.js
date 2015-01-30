@@ -35,9 +35,13 @@ angular.module('webwalletApp').controller('LanguageCtrl', function (
         if ($rootScope.language == CHINESE) {
         	angular.element("#logo-img-english").hide();
         	angular.element("#logo-img-chinese").show();
+        	
+        	angular.element("#nav-what").attr('href', 'http://www.bidingxing.com/bwallet');
         } else {
         	angular.element("#logo-img-chinese").hide();
         	angular.element("#logo-img-english").show();
+        	
+        	angular.element("#nav-what").attr('href', 'http://www.coincola.com/shops/54c1fc24963d3759182b2c7f?locale=en');
         }
         
         $translate(['nav-wallet', 'nav-what', 'nav-news', 'nav-help', 'nav-support', 'nav-language']).then(function (translations) {
