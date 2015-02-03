@@ -28,8 +28,8 @@
     "debug.log.warning" : "Warning: This log contains your XPUB. When you give it to a third party, you allow it to see your whole transaction history.",
     
     "error.plugin-loading-failed" : "Plugin loading failed :(",
-    "error.plugin-message-ie10" : "有可能是以下原因：<br /><ul><li>你未允许BWallet插件运行<a href='{{guideURLs.enableApplet}}' target='_blank' title='查看帮助' class='icon-help'></a></li><li>网络状态不佳导致BWallet插件未完成下载，请刷新网页重试</li></ul>",
-    "error.plugin-message" : "有可能是以下原因：<br /><ul><li>你未允许Java运行<a href='{{guideURLs.enable}}' target='_blank' title='查看帮助' class='icon-help'></a></li><li>你未允许BWallet插件运行<a href='{{guideURLs.enableApplet}}' target='_blank' title='查看帮助' class='icon-help'></a></li><li>网络状态不佳导致BWallet插件未完成下载，请刷新网页重试</li></ul>",
+    "error.plugin-message-ie10" : "Maybe:<br /><ul><li>You didn't enable BWallet plugin<a href='{{guideURLs.enableApplet}}' target='_blank' title='Need Help?' class='icon-help'></a></li><li>Poor network conditions cause BWallet plugin download unfinished, please refresh the page to retry.</li></ul>",
+    "error.plugin-message" : "Maybe:<br /><ul><li>You didn't enable Java in browser<a href='{{guideURLs.enable}}' target='_blank' title='Need Help?' class='icon-help'></a></li><li>You didn't enable BWallet plugin<a href='{{guideURLs.enableApplet}}' target='_blank' title='Need Help?' class='icon-help'></a></li><li>Poor network conditions cause BWallet plugin download unfinished, please refresh the page to retry.</li></ul>",
     
     "error.install.get-started" : "Get started",
     "error.install.download-and-install" : "Please download and install the <a href='{{link}}' target='_blank'>Java</a>. <br /> <strong>Or</strong> Enable Java in the browser. <br /> <strong>Why?</strong> The Java allows myBWallet to communicate with your BWallet device.",
