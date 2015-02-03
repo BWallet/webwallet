@@ -92,7 +92,7 @@
     "account.receive.more-please" : "More please",
     "account.receive.more-please-message" : "To access subsequent addresses, please use some of the listed addresses in a transaction.",
     "account.receive.qr-code" : "QR Code",
-    "account.receive.qr-code-link-title" : "Address info at {{blockExplorer.name}}",
+    "account.receive.qr-code-link-title" : "Address info at {{name}}",
     "account.receive.qr-code-details" : "Details",
     "account.receive.qr-code-bip32-path" : "BIP32 Path:",
     "account.receive.qr-code-balance" : "Balance:",
