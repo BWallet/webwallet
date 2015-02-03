@@ -43,7 +43,12 @@
                  class="txlist-hash"
                  target="_blank"
                  title="{{ 'account.index.transaction-info-link-title' | translate:blockExplorer }}"
-                 ><span class="glyphicon glyphicon-info-sign"></span></a>
+                 ><span class="glyphicon icon-blockchain"></span></a>
+              <a href="http://www.blockmeta.com/tx/{{tx.hash}}"
+                 class="txlist-hash"
+                 target="_blank"
+                 title="{{ 'account.index.transaction-info-link-title' | translate:{name: 'BlockMeta'} }}"
+                 ><span class="glyphicon icon-blockmeta"></span></a>
               <span class="text-success" ng-switch-when="recv">
                 <span class="glyphicon glyphicon-circle-arrow-right" title="Received"></span> {{tx.analysis.addr.toString()}}
               </span>
