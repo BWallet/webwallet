@@ -37,14 +37,16 @@ angular.module('webwalletApp').controller('LanguageCtrl', function (
         	angular.element("#logo-img-chinese").show();
         	
         	angular.element("#nav-what").attr('href', 'http://www.bidingxing.com/bwallet');
+        	angular.element("#nav-resources").attr('href', 'http://mybwallet.com/resources/zh/');
         } else {
         	angular.element("#logo-img-chinese").hide();
         	angular.element("#logo-img-english").show();
         	
-        	angular.element("#nav-what").attr('href', 'http://www.coincola.com/shops/54c1fc24963d3759182b2c7f?locale=en');
+        	angular.element("#nav-what").attr('href', 'http://www.bidingxing.com/en/bwallet');
+        	angular.element("#nav-resources").attr('href', 'http://mybwallet.com/resources/en/');
         }
         
-        $translate(['nav-wallet', 'nav-what', 'nav-news', 'nav-help', 'nav-support', 'nav-language']).then(function (translations) {
+        $translate(['nav-wallet', 'nav-what', 'nav-news', 'nav-help', 'nav-support', 'nav-language', 'nav-resources']).then(function (translations) {
             for ( var t in translations ){
             	angular.element("#" + t).html(translations[t]);
             }
