@@ -28,36 +28,52 @@ angular.module('webwalletApp').factory('TrezorAccount', function (
         this._externalNode = utils.deriveChildNode(this.node, 0);
         this._changeNode = utils.deriveChildNode(this.node, 1);
         
+        this._labelInDevice = null;
         // label translate
         this._label = createLabel('Account', this.id);
         var self = this;
         $translate('common.account').then(function (translation) {
-            self._label = createLabel(translation, self.id);
+            var prefix = translation;
+            if (self._labelInDevice != null)
+                prefix = self._labelInDevice;
+            self._label = createLabel(prefix, self.id);
         });
         $rootScope.$on('$translateChangeSuccess', function () {
             $translate('common.account').then(function (translation) {
-                self._label = createLabel(translation, self.id);
+                var prefix = translation;
+                if (self._labelInDevice != null)
+                    prefix = self._labelInDevice;
+                self._label = createLabel(prefix, self.id);
             });
         });
-        
-        function createLabel(prefix, id) {
-        	return prefix + ' #' + (+id + 1);
-        }
+    }
+
+    function createLabel(prefix, id) {
+        return prefix + ' #' + (+id + 1);
     }
 
     TrezorAccount.deserialize = function (data) {
-        return new TrezorAccount(
+        var acc = new TrezorAccount(
             data.id,
             data.coin,
             data.node
         );
+        acc.setLabelInDevice(data.labelInDevice);
+        return acc;
+    };
+
+    TrezorAccount.prototype.setLabelInDevice = function (labelInDevice) {
+        this._labelInDevice = labelInDevice;
+        this._label = createLabel(this._labelInDevice, this.id);
+        $log.log(this._label);
     };
 
     TrezorAccount.prototype.serialize = function () {
         return {
             id: this.id,
             coin: this.coin,
-            node: this.node
+            node: this.node,
+            labelInDevice: this._labelInDevice
         };
     };
 
