@@ -5,7 +5,7 @@
  *
  * TODO Document Firmware Service
  */
-angular.module('webwalletApp').value('FIRMWARE_LIST_URL', '/data/firmware/releases.json');
+angular.module('webwalletApp').value('FIRMWARE_LIST_URL', '/data/firmware/releases.json?v=1.3.1');
 
 angular.module('webwalletApp').service('firmwareService', function FirmwareService(
     FIRMWARE_LIST_URL,
