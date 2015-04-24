@@ -13,8 +13,9 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
 
     'use strict';
 
-    function TrezorDevice(id) {
-        this.id = ''+id;
+    function TrezorDevice(desc) {
+        this.id = desc.id || null;
+        this.path = desc.path || null;
         this.accounts = [];
         this.features = null;
         this.error = null;
@@ -76,7 +77,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
     };
 
     TrezorDevice.deserialize = function (data) {
-        var dev = new TrezorDevice(data.id);
+        var dev = new TrezorDevice(data);
 
         dev._passphrase = data.passphrase;
         dev.features = data.features;
@@ -91,6 +92,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
     TrezorDevice.prototype.serialize = function () {
         return {
             id: this.id,
+            path: this.path,
             passphrase: this._passphrase,
             features: this.features,
             accounts: this.accounts.map(function (acc) {
