@@ -270,6 +270,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
                 return self.discoverAccounts();
             });
 
+        /*
         this.accounts.forEach(function(acc, idx) {
             self._session.getAccountLabels(coin, true, 1).then(function(res) {
                 var label = _.find(res.message.labels, { index: (+idx + 1) });
@@ -282,6 +283,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
                 return acc;
             });
         });
+        */
 
         return $q.when(this.accounts);
     };
@@ -436,7 +438,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
                                     'Received: ' + vfXpub);
                 var account = new TrezorAccount(id, coin, accNode);
                 return account;
-            }).then(function(acc) {
+            });/*.then(function(acc) {
                 return self._session.getAccountLabels(coin, true, 1).then(function(res) {
                     var label = _.find(res.message.labels, { index: (+id + 1) });
                     if (label != null) {
@@ -447,7 +449,7 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
                     $log.warn('[device] AccountLabels unsupported', self.features);
                     return acc;
                 });
-            });
+            });*/
         });
 
         function derivePath(node, path) {
