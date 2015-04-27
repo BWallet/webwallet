@@ -115,7 +115,8 @@ angular.module('webwalletApp').controller('FirmwareCtrl', function (
             }
         });
         setState(state);
-
+        
+        firmwareService.setModalOpen(true);
         _modal = $modal.open({
             templateUrl: 'views/modal/firmware.html',
             size: 'lg',

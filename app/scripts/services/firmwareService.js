@@ -5,7 +5,7 @@
  *
  * TODO Document Firmware Service
  */
-angular.module('webwalletApp').value('FIRMWARE_LIST_URL', '/data/firmware/releases.json?v=1.3.1');
+angular.module('webwalletApp').value('FIRMWARE_LIST_URL', '/data/firmware/releases.json');
 
 angular.module('webwalletApp').service('firmwareService', function FirmwareService(
     FIRMWARE_LIST_URL,
@@ -16,7 +16,8 @@ angular.module('webwalletApp').service('firmwareService', function FirmwareServi
 
     'use strict';
 
-    var _firmwareList = $http.get(FIRMWARE_LIST_URL),
+    var _timestamp = new Date().getTime(),
+        _firmwareList = $http.get(FIRMWARE_LIST_URL + '?' + _timestamp),
         _modalOpen = false;
 
     this.EVENT_CONNECT = 'firmware.connect';

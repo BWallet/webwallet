@@ -240,9 +240,15 @@ angular.module('webwalletApp').factory('TrezorDevice', function (
 
             // language option for bootloader mode
             return self._session.initialize($rootScope.language).then(
-                function (features) {
+                function (res) {
+                    var features = res.message;
+                    if (features.bootloader_mode) {
+                        self.id = self.path;
+                    } else {
+                        self.id = features.device_id;
+                    }
                     self.error = null;
-                    return features;
+                    return res;
                 },
                 function (err) {
                     self.error = err.message || 'Failed to initialize the device.';
